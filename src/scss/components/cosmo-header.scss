@@ -1,0 +1,209 @@
+.cosmo-header {
+  font-size: var(--fs-6);
+  &__inner {
+    display: flex;
+    flex-direction: column;
+  }
+  &__top {
+    flex-shrink: 0;
+    @media (max-width: $lg) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+  }
+  &.is-show .cosmo-header__inner {
+    @media (max-width: $lg) {
+      background: rgba($whiteColor, .05);
+      backdrop-filter: blur(25px);
+      max-height: 100svh;
+      max-height: calc((var(--vh, 1vh) * 100) - 40rem);
+      padding: 18rem;
+      display: flex;
+      flex-direction: column;
+      align-items: initial;
+      position: fixed;
+      top: 20rem;
+      right: 20rem;
+      left: 20rem;
+      border: 2px solid rgba($whiteColor, .05);
+      border-radius: $radiusMd;
+      overflow-x: hidden;
+      overflow-y: auto;
+      transition: $transition;
+      transition-property: transform, visibility, opacity;
+      z-index: 998;
+    }
+  }
+  &__toggle {
+    @extend %area-click, %btn-reset;
+    background: url(../images/pattern-1.png) rgba($whiteColor, 0);
+    width: 40rem;
+    height: 40rem;
+    margin: 0 0 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: $transition;
+    cursor: pointer;
+    @media (max-width: $lg) {
+      margin-bottom: 0;
+    }
+    &:hover {
+      text-decoration: none;
+      @media (min-width: $lg-mf) {
+        background: url(../images/pattern-1.png) rgba($whiteColor, .15);
+      }
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  }
+  &:not(.is-show) .cosmo-header__toggle picture:nth-child(2),
+  &.is-show .cosmo-header__toggle picture:nth-child(1) {
+    display: none;
+  }
+  &__new-chat {
+    @extend %area-click, %btn-reset;
+    background: url(../images/pattern-1.png) rgba($whiteColor, .05);
+    min-width: 40rem;
+    height: 40rem;
+    margin: 0 0 25rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 300;
+    font-size: var(--fs-6);
+    border: 1px solid rgba($whiteColor, .05);
+    border-radius: 20rem;
+    vertical-align: top;
+    transition: $transition;
+    transition-property: background;
+    cursor: pointer;
+    @media (max-width: $lg) {
+      margin-bottom: 0;
+      padding: 0 10rem 0 13rem !important;
+    }
+    &:hover {
+      text-decoration: none;
+      @media (min-width: $lg-mf) {
+        background: url(../images/pattern-1.png) rgba($whiteColor, .15);
+      }
+    }
+    img {
+      width: 20rem;
+      height: 20rem;
+      display: block;
+    }
+    &-title {
+      margin: 0 10rem;
+      color: $goldColor;
+      @media (max-width: $lg) {
+        display: block !important;
+      }
+    }
+  }
+  &__dropdown {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    overflow: auto;
+    &-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  &__tab-nav {
+    margin: 0 0 20rem;
+    padding: 0;
+    display: flex;
+    list-style-type: none;
+    color: rgba($whiteColor, .2);
+    @media (max-width: $lg) {
+      max-width: 100%;
+      margin-top: 20rem;
+      flex-basis: 100%;
+    }
+    li {
+      margin: 0;
+      padding: 0;
+      &:not(:last-child) {
+        margin-right: 15rem;
+      }
+    }
+    a {
+      transition: $transition;
+      &:hover {
+        text-decoration: none;
+        @media (min-width: $lg-mf) {
+          color: $whiteColor;
+        }
+      }
+      &.is-active {
+        color: $whiteColor;
+        pointer-events: none;
+        user-select: none;
+      }
+      &:not(.is-active) {
+      }
+    }
+  }
+  #history-tools {
+    .cosmo-header__tab-list-item-card {
+      &:not(:last-child) {
+        margin-bottom: 15rem;
+      }
+    }
+  }
+  &__tab-content {
+  }
+  &__tab-item {
+    &:not(.is-show) {
+      display: none;
+    }
+  }
+  &__tab-list {
+    &-item {
+      &:not(:last-child) {
+        margin-bottom: 20rem;
+      }
+      &-day {
+        margin-bottom: 15rem;
+        font-weight: 300;
+        font-size: var(--fs-6);
+        color: rgba($whiteColor, .3);
+        @media (min-width: $lg-mf) {
+          background: $blackColor;
+          position: sticky;
+          top: 0;
+          z-index: 1;
+        }
+      }
+      &-card {
+        &:not(:last-child) {
+          margin-bottom: 10rem;
+        }
+      }
+    }
+  }
+}
+
+.cosmo-header {
+  &.is-show {
+    .cosmo-header__new-chat {
+      padding: 0 10rem 0 13rem;
+    }
+  }
+  &:not(.is-show) {
+    .cosmo-header__new-chat-title,
+    .cosmo-header__dropdown,
+    .cosmo-header__tab-nav {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+@use 'sass:math';
+
+/** Local font inclusion from the "./src/fonts" folder */
+@import 'config/fonts';
+
+/** Variable inclusion */
+@import 'config/vars';
+
+/** Inclusion of sass functions, mixins, and style extends */
+@import 'config/functions';
+@import 'config/mixins';
+@import 'config/patternSelectors';
+
+/** Reset */
+@import 'config/default';
+
+/** Libraries */
+@import 'libs/swiper';
+
+/** Common parameters, templates, and utility classes */
+@import 'config/media';
+@import 'config/base';
+
+/** Common BEM blocks used throughout the project */
+@import 'config/common';
+@import 'components/popup';
+@import 'components/header';
+@import 'components/footer';
+@import 'components/intro';
+@import 'components/user-page';
+@import 'components/features';
+@import 'components/benefits';
+@import 'components/stages-work';
+@import 'components/appeal';
+@import 'components/reviews';
+@import 'components/faq';
+@import 'components/cosmo-header';
+@import 'components/cosmo-chat-main';
+@import 'components/cosmo-chat-profile';
+@import 'components/cosmo-chat';
+
+/** Inclusion of styles for individual blocks and sections */

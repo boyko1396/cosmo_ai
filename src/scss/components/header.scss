@@ -1,0 +1,205 @@
+.header {
+  height: var(--header-height);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: var(--fs-6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 995;
+  &:before {
+    background: rgba($blackColor, .2);
+    backdrop-filter: blur(10px);
+    width: 100%;
+    height: 100%;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+  &__logo {
+    flex-shrink: 0;
+    @media (max-width: $lg) {
+    }
+  }
+  &__dropdown {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    @media (max-width: $lg) {
+      background: rgba($whiteColor, .05);
+      backdrop-filter: blur(25px);
+      max-height: 100svh;
+      max-height: calc((var(--vh, 1vh) * 100) - 40rem);
+      padding: 18rem;
+      display: flex;
+      flex-direction: column;
+      align-items: initial;
+      position: fixed;
+      top: 20rem;
+      right: 20rem;
+      left: 20rem;
+      border: 2px solid rgba($whiteColor, .05);
+      border-radius: $radiusSemi;
+      overflow-x: hidden;
+      overflow-y: auto;
+      transition: $transition;
+      transition-property: transform, visibility, opacity;
+      z-index: 998;
+    }
+    &:not(.is-show) {
+      @media (max-width: $lg) {
+        transform: translateY(100rem);
+        pointer-events: none;
+        visibility: hidden;
+        opacity: 0;
+      }
+    }
+    &-top {
+      @media (max-width: $lg) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+    &-logo {
+      max-width: 106rem;
+      flex: 0 0 106rem;
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+    }
+    &-toggle {
+      @extend %area-click, %btn-reset;
+      width: 40rem;
+      height: 40rem;
+      flex-shrink: 0;
+      &--open {
+        margin-left: auto;
+      }
+      &--close {
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+    }
+  }
+  &__nav {
+    margin: 0 20rem;
+    flex-grow: 1;
+    font-weight: 300;
+    @media (max-width: $lg) {
+      margin: 40rem 0;
+      display: flex;
+      font-weight: normal;
+      align-items: flex-start;
+    }
+    &-list {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      list-style-type: none;
+      @media (max-width: $lg) {
+        margin: 0 -10rem;
+        flex-wrap: wrap;
+      }
+    }
+    &-item {
+      margin: 0 15rem;
+      padding: 0;
+      @media (max-width: $lg) {
+        max-width: 100%;
+        margin: 0;
+        padding: 0 10rem;
+        flex: 0 0 100%;
+      }
+      &:not(:last-child) {
+        @media (max-width: $lg) {
+          margin-bottom: 12rem;
+        }
+      }
+    }
+    &-title {
+      @media (max-width: $lg) {
+        margin: 0;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+    }
+    &-link {
+      @extend %area-click;
+      display: block;
+      color: rgba($whiteColor, .7);
+      transition: $transition;
+      @media (max-width: $lg) {
+        color: rgba($whiteColor, .8);
+      }
+      &:hover {
+        text-decoration: none;
+        @media (min-width: $lg-mf) {
+          color: $accentColor;
+        }
+      }
+    }
+  }
+  &__btn-group {
+    flex-shrink: 0;
+    &.btn-group {
+      @media (max-width: $lg) {
+        --btn-group-gap: 5rem;
+      }
+    }
+    .btn-group {
+      &__inner {
+        @media (max-width: $lg) {
+        }
+      }
+      &__col {
+        @media (max-width: $lg) {
+          flex-grow: 1;
+        }
+      }
+      &__item {
+        min-width: 164rem;
+        @media (max-width: $lg) {
+          width: 100%;
+        }
+      }
+    }
+  }
+  &__overlay {
+    display: none;
+    @media (max-width: $lg) {
+      width: 100%;
+      height: 100%;
+      content: '';
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      transition: $transition;
+      transition-property: opacity, visibility;
+      z-index: 997;
+    }
+  }
+}
+
+body:not(.is-menu-opened) {
+  .header__overlay {
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+  }
+}

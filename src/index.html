@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', {
+    'title': 'Cosmo AI'
+  })
+  <body class="u-scrollbar">
+
+    <div id="root" class="site">
+      <div class="site__inner">
+        <!-- header BEGIN -->
+        @@include('html/components/header.html', {
+          'el': 'site__header'
+        })
+        <!-- header END -->
+        <main role="main" class="site__main">
+          <!-- intro BEGIN -->
+          <section id="intro" class="intro">
+            <div class="container container--size-md intro__container">
+              <div class="intro__inner">
+                <div class="intro__content">
+                  <p class="intro__suptitle">Нейросеть нового поколения</p>
+                  <h1 class="intro__title">Выведите свой контент на новую&nbsp;орбиту</h1>
+                </div>
+                <div class="intro__router">
+                  <a href="#features" class="js-anchor intro__router-btn">
+                    <span class="intro__router-btn-title">В космос</span>
+                    <svg class="u-icon intro__router-btn-icon">
+                      <use xlink:href="images/icons/icons.svg#arrow-type-1"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <picture class="intro__bg">
+                <!--<source
+                  srcset="images/intro-hero.webp"
+                  type="image/webp">-->
+                <img
+                  src="images/intro-hero.jpg"
+                  alt="Cosmo AI нейросеть нового поколения"
+                  width="1440"
+                  height="800">
+              </picture>
+              <div class="intro__benefits">
+                <div class="row intro__benefits-row">
+                  <div class="row__col--4 intro__benefits-col">
+                    <div class="info-item intro__benefits-item">
+                      <div class="info-item__inner">
+                        <picture class="info-item__icon">
+                          <img src="images/svg/check.svg" alt="Интуитивный интерфейс">
+                        </picture>
+                        <div class="info-item__content">
+                          <p class="info-item__title">Интуитивный интерфейс</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row__col--4 intro__benefits-col">
+                    <div class="info-item intro__benefits-item">
+                      <div class="info-item__inner">
+                        <picture class="info-item__icon">
+                          <img src="images/svg/docs-add.svg" alt="Качественная генерация">
+                        </picture>
+                        <div class="info-item__content">
+                          <p class="info-item__title">Качественная генерация</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row__col--4 intro__benefits-col">
+                    <div class="info-item intro__benefits-item">
+                      <div class="info-item__inner">
+                        <picture class="info-item__icon">
+                          <img src="images/svg/avg-pace.svg" alt="Высокая скорость">
+                        </picture>
+                        <div class="info-item__content">
+                          <p class="info-item__title">Высокая скорость</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- intro END -->
+          <!-- features BEGIN -->
+          <section id="features" class="features">
+            <div class="container container--size-md features__container">
+              <h2 class="features__title">Что умеет нейросеть?</h2>
+            </div>
+            <div class="js-features-slider-init d-sm-none swiper features__slider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="container container--size-md">
+                    <article class="features-card features__slider-card">
+                      <div class="features-card__media">
+                        <picture class="features-card__picture">
+                          <!--<source
+                            srcset="images/features-card-1.webp 1x, images/features-card-1@2x.webp 2x"
+                            type="image/webp">-->
+                          <img
+                            src="images/features-card-1.png"
+                            srcset="images/features-card-1.png 1x, images/features-card-1@2x.png 2x"
+                            alt="Генератор изображений"
+                            width="320"
+                            height="320">
+                        </picture>
+                      </div>
+                      <div class="u-box u-box--theme-gradient-lilac features-card__inner">
+                        <div class="features-card__content">
+                          <h3 class="fs-3 features-card__title">Генератор изображений</h3>
+                          <div class="u-content features-card__text">
+                            <p>Cosmo AI создает изображения по текстовому описанию, используя заданные параметры.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                    <article class="features-card features__slider-card">
+                      <div class="features-card__media">
+                        <picture class="features-card__picture">
+                          <!--<source
+                            srcset="images/features-card-2.webp 1x, images/features-card-2@2x.webp 2x"
+                            type="image/webp">-->
+                          <img
+                            src="images/features-card-2.png"
+                            srcset="images/features-card-2.png 1x, images/features-card-2@2x.png 2x"
+                            alt="Загрузи и спроси"
+                            width="320"
+                            height="320">
+                        </picture>
+                      </div>
+                      <div class="u-box u-box--theme-gradient-lilac features-card__inner">
+                        <div class="features-card__content">
+                          <h3 class="fs-3 features-card__title">Загрузи и спроси</h3>
+                          <div class="u-content features-card__text">
+                            <p>ChatGPT отвечает на вопросы о содержимом изображений, включая распознавание текста.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="container container--size-md">
+                    <article class="features-card features__slider-card">
+                      <div class="features-card__media">
+                        <picture class="features-card__picture">
+                          <!--<source
+                            srcset="images/features-card-1.webp 1x, images/features-card-1@2x.webp 2x"
+                            type="image/webp">-->
+                          <img
+                            src="images/features-card-1.png"
+                            srcset="images/features-card-1.png 1x, images/features-card-1@2x.png 2x"
+                            alt="Генератор изображений"
+                            width="320"
+                            height="320">
+                        </picture>
+                      </div>
+                      <div class="u-box u-box--theme-gradient-lilac features-card__inner">
+                        <div class="features-card__content">
+                          <h3 class="fs-3 features-card__title">Генератор изображений 2</h3>
+                          <div class="u-content features-card__text">
+                            <p>Cosmo AI создает изображения по текстовому описанию, используя заданные параметры.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                    <article class="features-card features__slider-card">
+                      <div class="features-card__media">
+                        <picture class="features-card__picture">
+                          <!--<source
+                            srcset="images/features-card-2.webp 1x, images/features-card-2@2x.webp 2x"
+                            type="image/webp">-->
+                          <img
+                            src="images/features-card-2.png"
+                            srcset="images/features-card-2.png 1x, images/features-card-2@2x.png 2x"
+                            alt="Загрузи и спроси"
+                            width="320"
+                            height="320">
+                        </picture>
+                      </div>
+                      <div class="u-box u-box--theme-gradient-lilac features-card__inner">
+                        <div class="features-card__content">
+                          <h3 class="fs-3 features-card__title">Загрузи и спроси 2</h3>
+                          <div class="u-content features-card__text">
+                            <p>ChatGPT отвечает на вопросы о содержимом изображений, включая распознавание текста.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="container container--size-md">
+                    <article class="features-card features__slider-card">
+                      <div class="features-card__media">
+                        <picture class="features-card__picture">
+                          <!--<source
+                            srcset="images/features-card-1.webp 1x, images/features-card-1@2x.webp 2x"
+                            type="image/webp">-->
+                          <img
+                            src="images/features-card-1.png"
+                            srcset="images/features-card-1.png 1x, images/features-card-1@2x.png 2x"
+                            alt="Генератор изображений"
+                            width="320"
+                            height="320">
+                        </picture>
+                      </div>
+                      <div class="u-box u-box--theme-gradient-lilac features-card__inner">
+                        <div class="features-card__content">
+                          <h3 class="fs-3 features-card__title">Генератор изображений 3</h3>
+                          <div class="u-content features-card__text">
+                            <p>Cosmo AI создает изображения по текстовому описанию, используя заданные параметры.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                    <article class="features-card features__slider-card">
+                      <div class="features-card__media">
+                        <picture class="features-card__picture">
+                          <!--<source
+                            srcset="images/features-card-2.webp 1x, images/features-card-2@2x.webp 2x"
+                            type="image/webp">-->
+                          <img
+                            src="images/features-card-2.png"
+                            srcset="images/features-card-2.png 1x, images/features-card-2@2x.png 2x"
+                            alt="Загрузи и спроси"
+                            width="320"
+                            height="320">
+                        </picture>
+                      </div>
+                      <div class="u-box u-box--theme-gradient-lilac features-card__inner">
+                        <div class="features-card__content">
+                          <h3 class="fs-3 features-card__title">Загрузи и спроси 3</h3>
+                          <div class="u-content features-card__text">
+                            <p>ChatGPT отвечает на вопросы о содержимом изображений, включая распознавание текста.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="js-features-slider-mobile-init d-sm-block swiper features__slider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="container container--size-md">
+                    <article class="features-card features__slider-card">
+                      <div class="features-card__media">
+                        <picture class="features-card__picture">
+                          <!--<source
+                            srcset="images/features-card-1.webp 1x, images/features-card-1@2x.webp 2x"
+                            type="image/webp">-->
+                          <img
+                            src="images/features-card-1.png"
+                            srcset="images/features-card-1.png 1x, images/features-card-1@2x.png 2x"
+                            alt="Генератор изображений"
+                            width="320"
+                            height="320">
+                        </picture>
+                      </div>
+                      <div class="u-box u-box--theme-gradient-lilac features-card__inner">
+                        <div class="features-card__content">
+                          <h3 class="fs-3 features-card__title">Генератор изображений</h3>
+                          <div class="u-content features-card__text">
+                            <p>Cosmo AI создает изображения по текстовому описанию, используя заданные параметры.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="container container--size-md">
+                    <article class="features-card features__slider-card">
+                      <div class="features-card__media">
+                        <picture class="features-card__picture">
+                          <!--<source
+                            srcset="images/features-card-2.webp 1x, images/features-card-2@2x.webp 2x"
+                            type="image/webp">-->
+                          <img
+                            src="images/features-card-2.png"
+                            srcset="images/features-card-2.png 1x, images/features-card-2@2x.png 2x"
+                            alt="Загрузи и спроси"
+                            width="320"
+                            height="320">
+                        </picture>
+                      </div>
+                      <div class="u-box u-box--theme-gradient-lilac features-card__inner">
+                        <div class="features-card__content">
+                          <h3 class="fs-3 features-card__title">Загрузи и спроси</h3>
+                          <div class="u-content features-card__text">
+                            <p>ChatGPT отвечает на вопросы о содержимом изображений, включая распознавание текста.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="container container--size-md">
+                    <article class="features-card features__slider-card">
+                      <div class="features-card__media">
+                        <picture class="features-card__picture">
+                          <!--<source
+                            srcset="images/features-card-1.webp 1x, images/features-card-1@2x.webp 2x"
+                            type="image/webp">-->
+                          <img
+                            src="images/features-card-1.png"
+                            srcset="images/features-card-1.png 1x, images/features-card-1@2x.png 2x"
+                            alt="Генератор изображений"
+                            width="320"
+                            height="320">
+                        </picture>
+                      </div>
+                      <div class="u-box u-box--theme-gradient-lilac features-card__inner">
+                        <div class="features-card__content">
+                          <h3 class="fs-3 features-card__title">Генератор изображений 2</h3>
+                          <div class="u-content features-card__text">
+                            <p>Cosmo AI создает изображения по текстовому описанию, используя заданные параметры.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="container container--size-md">
+                    <article class="features-card features__slider-card">
+                      <div class="features-card__media">
+                        <picture class="features-card__picture">
+                          <!--<source
+                            srcset="images/features-card-2.webp 1x, images/features-card-2@2x.webp 2x"
+                            type="image/webp">-->
+                          <img
+                            src="images/features-card-2.png"
+                            srcset="images/features-card-2.png 1x, images/features-card-2@2x.png 2x"
+                            alt="Загрузи и спроси"
+                            width="320"
+                            height="320">
+                        </picture>
+                      </div>
+                      <div class="u-box u-box--theme-gradient-lilac features-card__inner">
+                        <div class="features-card__content">
+                          <h3 class="fs-3 features-card__title">Загрузи и спроси 2</h3>
+                          <div class="u-content features-card__text">
+                            <p>ChatGPT отвечает на вопросы о содержимом изображений, включая распознавание текста.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="container container--size-md">
+                    <article class="features-card features__slider-card">
+                      <div class="features-card__media">
+                        <picture class="features-card__picture">
+                          <!--<source
+                            srcset="images/features-card-1.webp 1x, images/features-card-1@2x.webp 2x"
+                            type="image/webp">-->
+                          <img
+                            src="images/features-card-1.png"
+                            srcset="images/features-card-1.png 1x, images/features-card-1@2x.png 2x"
+                            alt="Генератор изображений"
+                            width="320"
+                            height="320">
+                        </picture>
+                      </div>
+                      <div class="u-box u-box--theme-gradient-lilac features-card__inner">
+                        <div class="features-card__content">
+                          <h3 class="fs-3 features-card__title">Генератор изображений 3</h3>
+                          <div class="u-content features-card__text">
+                            <p>Cosmo AI создает изображения по текстовому описанию, используя заданные параметры.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="container container--size-md">
+                    <article class="features-card features__slider-card">
+                      <div class="features-card__media">
+                        <picture class="features-card__picture">
+                          <!--<source
+                            srcset="images/features-card-2.webp 1x, images/features-card-2@2x.webp 2x"
+                            type="image/webp">-->
+                          <img
+                            src="images/features-card-2.png"
+                            srcset="images/features-card-2.png 1x, images/features-card-2@2x.png 2x"
+                            alt="Загрузи и спроси"
+                            width="320"
+                            height="320">
+                        </picture>
+                      </div>
+                      <div class="u-box u-box--theme-gradient-lilac features-card__inner">
+                        <div class="features-card__content">
+                          <h3 class="fs-3 features-card__title">Загрузи и спроси 3</h3>
+                          <div class="u-content features-card__text">
+                            <p>ChatGPT отвечает на вопросы о содержимом изображений, включая распознавание текста.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container container--size-md features__container">
+              <div class="features__footer">
+                <a href="registration.html" class="btn btn--size-lg btn--theme-accent-gradient features__footer-btn">
+                  <span class="btn__inner">
+                    <span class="btn__title">Попробовать сейчас</span>
+                  </span>
+                </a>
+                <div class="d-sm-none slider-control features__footer-slider-control">
+                  <div class="slider-control__inner">
+                    <button type="button" class="js-features-slider-btn-prev slider-control__btn slider-control__btn--prev">
+                      <svg class="u-icon slider-control__btn-icon">
+                        <use xlink:href="images/icons/icons.svg#arrow-type-1"></use>
+                      </svg>
+                      <span class="slider-control__btn-title">Назад</span>
+                    </button>
+                    <p class="js-features-slider-pagination slider-control__pagination"></p>
+                    <button type="button" class="js-features-slider-btn-next slider-control__btn slider-control__btn--next">
+                      <svg class="u-icon slider-control__btn-icon">
+                        <use xlink:href="images/icons/icons.svg#arrow-type-1"></use>
+                      </svg>
+                      <span class="slider-control__btn-title">Далее</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="d-sm-block slider-control features__footer-slider-control">
+                  <div class="slider-control__inner">
+                    <button type="button" class="js-features-slider-mobile-btn-prev slider-control__btn slider-control__btn--prev">
+                      <svg class="u-icon slider-control__btn-icon">
+                        <use xlink:href="images/icons/icons.svg#arrow-type-1"></use>
+                      </svg>
+                      <span class="slider-control__btn-title">Назад</span>
+                    </button>
+                    <p class="js-features-slider-mobile-pagination slider-control__pagination"></p>
+                    <button type="button" class="js-features-slider-mobile-btn-next slider-control__btn slider-control__btn--next">
+                      <svg class="u-icon slider-control__btn-icon">
+                        <use xlink:href="images/icons/icons.svg#arrow-type-1"></use>
+                      </svg>
+                      <span class="slider-control__btn-title">Далее</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- features END -->
+          <!-- benefits BEGIN -->
+          <section id="benefits" class="benefits">
+            <div class="container container--size-md benefits__container">
+              <h2 class="benefits__title">Преимущества Cosmo AI</h2>
+              <div class="benefits__block">
+                <picture class="benefits__block-earth">
+                  <!--<source
+                    srcset="images/benefits-earth.webp"
+                    type="image/webp">-->
+                  <img
+                    src="images/benefits-earth.png"
+                    alt="Преимущества Cosmo AI"
+                    width="1000"
+                    height="1000">
+                </picture>
+                <div class="benefits__block-list">
+                  <div class="info-item benefits__block-list-card">
+                    <div class="info-item__inner">
+                      <picture class="info-item__icon">
+                        <img src="images/svg/vpn-key.svg" alt="Работа без VPN">
+                      </picture>
+                      <div class="info-item__content">
+                        <p class="info-item__title">Работа без VPN</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="info-item benefits__block-list-card">
+                    <div class="info-item__inner">
+                      <picture class="info-item__icon">
+                        <img src="images/svg/translate.svg" alt="Мультиязычность">
+                      </picture>
+                      <div class="info-item__content">
+                        <p class="info-item__title">Мультиязычность</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="info-item benefits__block-list-card">
+                    <div class="info-item__inner">
+                      <picture class="info-item__icon">
+                        <img src="images/svg/avg-pace.svg" alt="Мгновенные ответы">
+                      </picture>
+                      <div class="info-item__content">
+                        <p class="info-item__title">Мгновенные ответы</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="info-item benefits__block-list-card">
+                    <div class="info-item__inner">
+                      <picture class="info-item__icon">
+                        <img src="images/svg/plus-type-1.svg" alt="Широкие возможности">
+                      </picture>
+                      <div class="info-item__content">
+                        <p class="info-item__title">Широкие возможности</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- benefits END -->
+          <!-- stages-work BEGIN -->
+          <section id="stages-work" class="stages-work">
+            <div class="container container--size-md stages-work__container">
+              <h2 class="stages-work__title">Как это работает?</h2>
+              <div class="stages-work__list">
+                <article class="stages-card stages-work__list-card">
+                  <picture class="stages-card__earth">
+                    <!--<source
+                      srcset="images/stages-card-img-1.webp"
+                      type="image/webp">-->
+                    <img
+                      src="images/stages-card-img-1.png"
+                      alt="Зарегистрируйтесь на нашем сайте"
+                      width="289"
+                      height="289">
+                  </picture>
+                  <div class="u-box u-box--theme-gradient-lilac stages-card__inner">
+                    <p class="stages-card__counter"></p>
+                    <div class="stages-card__content">
+                      <h3 class="stages-card__title">Зарегистрируйтесь на&nbsp;нашем сайте</h3>
+                      <div class="u-content stages-card__text">
+                        <p>Мы создали максимально простую и удобную регистрацию</p>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <article class="stages-card stages-work__list-card">
+                  <picture class="stages-card__earth">
+                    <!--<source
+                      srcset="images/stages-card-img-2.webp"
+                      type="image/webp">-->
+                    <img
+                      src="images/stages-card-img-2.png"
+                      alt="Введите нужный запрос в чат"
+                      width="426"
+                      height="426">
+                  </picture>
+                  <div class="u-box u-box--theme-gradient-lilac stages-card__inner">
+                    <p class="stages-card__counter"></p>
+                    <div class="stages-card__content">
+                      <h3 class="stages-card__title">Введите нужный запрос в чат</h3>
+                      <div class="u-content stages-card__text">
+                        <p>Задавайте любые вопросы и получайте ответы за секунду</p>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <article class="stages-card stages-work__list-card">
+                  <picture class="stages-card__earth">
+                    <!--<source
+                      srcset="images/stages-card-img-3.webp"
+                      type="image/webp">-->
+                    <img
+                      src="images/stages-card-img-3.png"
+                      alt="Моментальная выдача ответа"
+                      width="275"
+                      height="275">
+                  </picture>
+                  <div class="u-box u-box--theme-gradient-lilac stages-card__inner">
+                    <p class="stages-card__counter"></p>
+                    <div class="stages-card__content">
+                      <h3 class="stages-card__title">Моментальная выдача&nbsp;ответа</h3>
+                      <div class="u-content stages-card__text">
+                        <p>Cosmo AI обработает запрос и выдаст развернутый ответ</p>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </section>
+          <!-- stages-work END -->
+          <!-- appeal BEGIN -->
+          <section id="appeal" class="appeal">
+            <div class="container container--size-md appeal__container">
+              <div class="appeal__block-wrapper">
+                <picture class="appeal__earth">
+                  <!--<source
+                    srcset="images/appeal-earth.webp"
+                    type="image/webp">-->
+                  <img
+                    src="images/appeal-earth.png"
+                    alt="Введите нужный запрос в чат"
+                    width="1320"
+                    height="566">
+                </picture>
+                <div class="u-box u-box--theme-gradient-lilac appeal__block">
+                  <h2 class="appeal__title">Запусти COSMO&nbsp;AI ПРЯМО&nbsp;сейчас</h2>
+                  <a href="registration.html" class="btn btn--size-lg btn--theme-accent-gradient appeal__btn">
+                    <span class="btn__inner">
+                      <span class="btn__title">Начать чат</span>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- appeal END -->
+          <!-- reviews BEGIN -->
+          <section id="reviews" class="reviews">
+            <div class="container container--size-md reviews__container">
+              <h2 class="reviews__title">Тысячи положительных отызвов</h2>
+              <div class="js-reviews-slider-init swiper reviews__slider">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <article class="reviews-card reviews__slider-card">
+                      <div class="reviews-card__media">
+                        <picture class="reviews-card__picture">
+                          <!--<source
+                            srcset="images/reviews-card-1.webp"
+                            type="image/webp">-->
+                          <img
+                            src="images/reviews-card-1.png"
+                            alt=""
+                            width="288"
+                            height="288">
+                        </picture>
+                      </div>
+                      <div class="u-box u-box--theme-gradient-lilac reviews-card__inner">
+                        <div class="reviews-card__content">
+                          <div class="u-rating reviews-card__rating" style="--rating-progress: 5"></div>
+                          <h3 class="reviews-card__title">Травкина Кристина</h3>
+                          <div class="u-content reviews-card__text">
+                            <p>Нейросеть стала незаменимым помощником в создании контента для наших кампаний. Она генерирует тексты, которые точно отвечают нашим требованиям и вдохновляют на новые идеи. Удобно, что нет необходимости в VPN.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="swiper-slide">
+                    <article class="reviews-card reviews__slider-card">
+                      <div class="reviews-card__media">
+                        <picture class="reviews-card__picture">
+                          <!--<source
+                            srcset="images/reviews-card-2.webp"
+                            type="image/webp">-->
+                          <img
+                            src="images/reviews-card-2.png"
+                            alt=""
+                            width="288"
+                            height="288">
+                        </picture>
+                      </div>
+                      <div class="u-box u-box--theme-gradient-lilac reviews-card__inner">
+                        <div class="reviews-card__content">
+                          <div class="u-rating reviews-card__rating" style="--rating-progress: 5"></div>
+                          <h3 class="reviews-card__title">Логачёва Светлана</h3>
+                          <div class="u-content reviews-card__text">
+                            <p>Удобная вещь для работы и&nbsp;учебы. Помогает быстро и&nbsp;качественно сделать какое-либо задание без&nbsp;особых усилий. Понравилось, что можно редактировать содержание в&nbsp;создании рефератов.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="swiper-slide">
+                    <article class="reviews-card reviews__slider-card">
+                      <div class="reviews-card__media">
+                        <picture class="reviews-card__picture">
+                          <!--<source
+                            srcset="images/reviews-card-3.webp"
+                            type="image/webp">-->
+                          <img
+                            src="images/reviews-card-3.png"
+                            alt=""
+                            width="288"
+                            height="288">
+                        </picture>
+                      </div>
+                      <div class="u-box u-box--theme-gradient-lilac reviews-card__inner">
+                        <div class="reviews-card__content">
+                          <div class="u-rating reviews-card__rating" style="--rating-progress: 5"></div>
+                          <h3 class="reviews-card__title">Курков Михаил</h3>
+                          <div class="u-content reviews-card__text">
+                            <p>Ball AI помог мне обрабатывать большое количество текстовых данных и проводить исследования более эффективно. Он был полезен в создании документов, включая договоры, письма и&nbsp;другие правовые документы.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="swiper-slide">
+                    <article class="reviews-card reviews__slider-card">
+                      <div class="reviews-card__media">
+                        <picture class="reviews-card__picture">
+                          <!--<source
+                            srcset="images/reviews-card-3.webp"
+                            type="image/webp">-->
+                          <img
+                            src="images/reviews-card-3.png"
+                            alt=""
+                            width="288"
+                            height="288">
+                        </picture>
+                      </div>
+                      <div class="u-box u-box--theme-gradient-lilac reviews-card__inner">
+                        <div class="reviews-card__content">
+                          <div class="u-rating reviews-card__rating" style="--rating-progress: 5"></div>
+                          <h3 class="reviews-card__title">Курков Михаил</h3>
+                          <div class="u-content reviews-card__text">
+                            <p>Ball AI помог мне обрабатывать большое количество текстовых данных и проводить исследования более эффективно. Он был полезен в создании документов, включая договоры, письма и&nbsp;другие правовые документы.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+              </div>
+              <div class="reviews__footer">
+                <a href="registration.html" class="btn btn--size-lg btn--theme-accent-gradient reviews__footer-btn">
+                  <span class="btn__inner">
+                    <span class="btn__title">Попробовать сейчас</span>
+                  </span>
+                </a>
+                <div class="slider-control reviews__footer-slider-control">
+                  <div class="slider-control__inner">
+                    <button type="button" class="js-reviews-slider-btn-prev slider-control__btn slider-control__btn--prev">
+                      <svg class="u-icon slider-control__btn-icon">
+                        <use xlink:href="images/icons/icons.svg#arrow-type-1"></use>
+                      </svg>
+                      <span class="slider-control__btn-title">Назад</span>
+                    </button>
+                    <p class="js-reviews-slider-pagination slider-control__pagination"></p>
+                    <button type="button" class="js-reviews-slider-btn-next slider-control__btn slider-control__btn--next">
+                      <svg class="u-icon slider-control__btn-icon">
+                        <use xlink:href="images/icons/icons.svg#arrow-type-1"></use>
+                      </svg>
+                      <span class="slider-control__btn-title">Далее</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- reviews END -->
+          <!-- faq BEGIN -->
+          <section id="faq" class="faq">
+            <div class="container container--size-md faq__container">
+              <h2 class="faq__title">Часто задаваемые вопросы</h2>
+              <div itemscope itemtype="https://schema.org/FAQPage" class="faq__list">
+                <article class="u-box u-box--theme-gradient-lilac faq-card faq-card--theme-grey faq__list-card" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                  <div class="faq-card__header">
+                    <button type="button" class="js-faq-card-toggle faq-card__btn">
+                      <h3 itemprop="name" class="faq-card__title">Что такое Нейросеть и&nbsp;как&nbsp;она работает?</h3>
+                    </button>
+                    <div class="faq-card__icon">
+                      <svg class="u-icon">
+                        <use xlink:href="images/icons/icons.svg#arrow-type-2"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer" class="faq-card__dropdown">
+                    <div class="faq-card__inner">
+                      <div class="u-content faq-card__text">
+                        <p>Нейросеть – это мощный инструмент на базе искусственного интеллекта, который помогает вам создавать тексты, изображения и преобразовывать аудио в текст. Она обучена на огромном количестве данных и способна генерировать высококачественные результаты за считанные секунды.</p>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <article class="u-box u-box--theme-gradient-lilac faq-card faq-card--theme-grey faq__list-card" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                  <div class="faq-card__header">
+                    <button type="button" class="js-faq-card-toggle faq-card__btn">
+                      <h3 itemprop="name" class="faq-card__title">Можно ли настроить стиль и&nbsp;тон текста?</h3>
+                    </button>
+                    <div class="faq-card__icon">
+                      <svg class="u-icon">
+                        <use xlink:href="images/icons/icons.svg#arrow-type-2"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer" class="faq-card__dropdown">
+                    <div class="faq-card__inner">
+                      <div class="u-content faq-card__text">
+                        <p>Нейросеть – это мощный инструмент на базе искусственного интеллекта, который помогает вам создавать тексты, изображения и преобразовывать аудио в текст. Она обучена на огромном количестве данных и способна генерировать высококачественные результаты за считанные секунды.</p>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <article class="u-box u-box--theme-gradient-lilac faq-card faq-card--theme-grey faq__list-card" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                  <div class="faq-card__header">
+                    <button type="button" class="js-faq-card-toggle faq-card__btn">
+                      <h3 itemprop="name" class="faq-card__title">Насколько безопасны мои данные?</h3>
+                    </button>
+                    <div class="faq-card__icon">
+                      <svg class="u-icon">
+                        <use xlink:href="images/icons/icons.svg#arrow-type-2"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer" class="faq-card__dropdown">
+                    <div class="faq-card__inner">
+                      <div class="u-content faq-card__text">
+                        <p>Нейросеть – это мощный инструмент на базе искусственного интеллекта, который помогает вам создавать тексты, изображения и преобразовывать аудио в текст. Она обучена на огромном количестве данных и способна генерировать высококачественные результаты за считанные секунды.</p>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </section>
+          <!-- faq END -->
+        </main>
+        <!-- footer BEGIN -->
+        @@include('html/components/footer.html', {
+          'el': 'site__footer'
+        })
+        <!-- footer END -->
+      </div>
+      @@include('html/modal.html')
+    </div>
+
+    @@include('html/script.html')
+  </body>
+</html>

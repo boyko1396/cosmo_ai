@@ -1,0 +1,75 @@
+.appeal {
+  padding: 164rem 0 84rem;
+  @media (max-width: $md) {
+    padding: 50rem 0;
+  }
+  &__container {
+  }
+  &__block {
+    backdrop-filter: unset;
+    min-height: 566rem;
+    padding: 140rem 116rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-width: 3px;
+    @media (max-width: $xl) {
+      padding: 100rem 80rem;
+    }
+    @media (max-width: $sm) {
+      min-height: 0;
+      padding: 50rem 25rem;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      border-width: 2px;
+      border-radius: $radiusMd;
+    }
+    &-wrapper {
+      margin: 0 -60rem;
+      border-radius: $radiusLg;
+      position: relative;
+      overflow: hidden;
+      z-index: 0;
+      @media (max-width: $xl) {
+        margin-right: 0;
+        margin-left: 0;
+      }
+      @media (max-width: $sm) {
+        border-radius: $radiusMd;
+      }
+    }
+  }
+  &__title {
+    max-width: 380rem;
+    margin: 0;
+    text-transform: uppercase;
+    @media (max-width: $sm) {
+      max-width: 340rem;
+      margin: 0 auto 394rem;
+      flex: 0 0 100%;
+      text-align: center;
+    }
+  }
+  &__earth {
+    width: 1320rem;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -2;
+    @media (max-width: $sm) {
+      margin-top: 15rem;
+      margin-left: -40rem;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+  &__btn {
+    min-width: 230rem;
+  }
+}

@@ -1,0 +1,75 @@
+.stages-work {
+  padding: 43rem 0 143rem;
+  @media (max-width: $md) {
+    padding: 50rem 0;
+  }
+  &__container {
+  }
+  &__title {
+    margin: 0 0 54rem;
+    text-transform: uppercase;
+    @media (max-width: $sm) {
+      margin-bottom: 150rem;
+      text-align: center;
+    }
+  }
+  &__list {
+    counter-reset: stagesCardCounter;
+    &-card {
+      counter-increment: stagesCardCounter;
+      @media (max-width: $sm) {
+        width: 86%;
+      }
+      &:nth-child(1) {
+        max-width: 644rem;
+        @media (max-width: $sm) {
+          max-width: 100%;
+        }
+        .stages-card__earth {
+          top: 80rem;
+          left: 26rem;
+          @media (max-width: $sm) {
+            top: -100rem;
+            left: 8rem;
+          }
+        }
+      }
+      &:nth-child(2) {
+        max-width: 578rem;
+        margin: 0 auto;
+        @media (max-width: $sm) {
+          margin-right: 0;
+        }
+        .stages-card__earth {
+          top: -316rem;
+          right: -310rem;
+          @media (max-width: $sm) {
+            top: -120rem;
+            right: -10rem;
+          }
+        }
+      }
+      &:nth-child(3) {
+        max-width: 558rem;
+        margin-left: auto;
+        @media (max-width: $sm) {
+          margin-right: auto;
+        }
+        .stages-card__earth {
+          top: -2rem;
+          left: -147rem;
+          @media (max-width: $sm) {
+            top: -78rem;
+            left: -10rem;
+          }
+        }
+      }
+      & + & {
+        margin-top: 35rem;
+        @media (max-width: $sm) {
+          margin-top: 50rem;
+        }
+      }
+    }
+  }
+}

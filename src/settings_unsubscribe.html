@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', {
+    'title': 'Cosmo AI - Settings unsubscribe'
+  })
+  <body>
+
+    <div id="root" class="cosmo-chat">
+      <div class="cosmo-chat__inner">
+        <div class="cosmo-chat__body">
+          @@include('html/components/chat-header.html', {
+            'el': 'cosmo-chat__header'
+          })
+          <main class="cosmo-chat-main cosmo-chat__main" role="main">
+            <div class="u-scrollbar cosmo-chat-main__settings">
+              <h1 class="cosmo-chat-main__title">Настройки</h1>
+              <div class="row cosmo-chat-main__settings-row">
+                <div class="row__col cosmo-chat-main__settings-col cosmo-chat-main__settings-col--profile">
+                  <div class="settings-card">
+                    <p class="settings-card__title">Профиль</p>
+                    <div class="settings-card__info-list">
+                      <div class="settings-card__info">
+                        <p class="settings-card__info-title">Почта:</p>
+                        <div class="settings-card__info-text">example@mail.ru</div>
+                      </div>
+                      <div class="settings-card__info">
+                        <p class="settings-card__info-title">Пароль:</p>
+                        <div class="settings-card__info-text">******************</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row__col cosmo-chat-main__settings-col cosmo-chat-main__settings-col--social">
+                  <div class="settings-card">
+                    <p class="settings-card__title">Подключение WhatsApp</p>
+                    <div class="settings-card__info-list">
+                      <div class="settings-card__info">
+                        <p class="settings-card__info-title">WhastApp статус:</p>
+                        <div class="settings-card__info-text">не подключён</div>
+                      </div>
+                    </div>
+                    <button type="button" class="btn-action btn-action--size-sm btn-action--theme-gradient-accent settings-card__info-btn-action">Подключить</button>
+                  </div>
+                </div>
+                <div class="row__col cosmo-chat-main__settings-col cosmo-chat-main__settings-col--links">
+                  <div class="settings-card">
+                    <p class="settings-card__title">Полезные ссылки</p>
+                    <div class="settings-card__info-list">
+                      <div class="settings-card__info">
+                        <p class="settings-card__info-title">Страница о нашей компании:</p>
+                        <div class="settings-card__info-text">www.example.ru</div>
+                      </div>
+                      <div class="settings-card__info">
+                        <p class="settings-card__info-title">Документы:</p>
+                        <div class="settings-card__info-text"><a href="#" target="_blank">Политика конфиденциальности</a>, <a href="#" target="_blank">Условия пользования</a>, <a href="#" target="_blank">Оферта</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row cosmo-chat-main__settings-row">
+                <div class="row__col--12 cosmo-chat-main__settings-col cosmo-chat-main__settings-col--faq">
+                  <div class="settings-card">
+                    <p class="settings-card__title">Частые вопросы</p>
+                    <div itemscope itemtype="https://schema.org/FAQPage" class="settings-card__faq">
+                      <article class="faq-settings settings-card__faq-card" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                        <header class="faq-settings__header">
+                          <button class="js-faq-settings-toggle faq-settings__btn">Как отменить подписку?</button>
+                          <picture class="faq-settings__icon">
+                            <img src="images/svg/arrow-type-2.svg">
+                          </picture>
+                        </header>
+                        <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer" class="faq-settings__dropdown">
+                          <div class="faq-settings__inner">
+                            <div class="u-content faq-settings__text">
+                              <p>Отменить подписку можно в любое время в личном кабинете</p>
+                            </div>
+                          </div>
+                        </div>
+                      </article>
+                      <article class="faq-settings settings-card__faq-card" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                        <header class="faq-settings__header">
+                          <button class="js-faq-settings-toggle faq-settings__btn">Как запросить возврат?</button>
+                          <picture class="faq-settings__icon">
+                            <img src="images/svg/arrow-type-2.svg">
+                          </picture>
+                        </header>
+                        <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer" class="faq-settings__dropdown">
+                          <div class="faq-settings__inner">
+                            <div class="u-content faq-settings__text">
+                              <p>Отменить подписку можно в любое время в личном кабинете</p>
+                            </div>
+                          </div>
+                        </div>
+                      </article>
+                      <article class="faq-settings settings-card__faq-card" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                        <header class="faq-settings__header">
+                          <button class="js-faq-settings-toggle faq-settings__btn">Как отменить подписку?</button>
+                          <picture class="faq-settings__icon">
+                            <img src="images/svg/arrow-type-2.svg">
+                          </picture>
+                        </header>
+                        <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer" class="faq-settings__dropdown">
+                          <div class="faq-settings__inner">
+                            <div class="u-content faq-settings__text">
+                              <p>Отменить подписку можно в любое время в личном кабинете</p>
+                            </div>
+                          </div>
+                        </div>
+                      </article>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row cosmo-chat-main__settings-row">
+                <div class="row__col--12 cosmo-chat-main__settings-col cosmo-chat-main__settings-col--faq">
+                  <div class="settings-card">
+                    <p class="settings-card__title">Связаться с поддержкой</p>
+                    <div class="settings-card__help">
+                      <p class="settings-card__help-text">У вас возникли проблемы? Наша служба поддержки готова помочь вам. Нажмите на кнопку далее, чтобы связаться с нами:</p>
+                      <a href="contacts.html" class="btn btn--size-semi btn--theme-accent-gradient settings-card__help-btn">
+                        <span class="btn__inner">
+                          <span class="btn__title">E-mail поддержка</span>
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row cosmo-chat-main__settings-row">
+                <div class="row__col--12 cosmo-chat-main__settings-col cosmo-chat-main__settings-col--subscribe">
+                  <div class="settings-card">
+                    <p class="settings-card__title">Подписка</p>
+                    <div class="settings-card__tarrifs">
+                      <div class="settings-card__tarrifs-name">Тариф: <span class="is-free">FREE</span></div>
+                      <div class="settings-card__tarrifs-list">
+                        <div class="settings-card__tarrifs-list-col">
+                          <div class="tarrifs-card">
+                            <div class="tarrifs-card__header">
+                              <p class="tarrifs-card__title">Ответы от ChatGPT API</p>
+                              <div class="tarrifs-card__status is-plus">
+                                <svg class="u-icon">
+                                  <use xlink:href="images/icons/icons.svg#plus"></use>
+                                </svg>
+                              </div>
+                            </div>
+                            <p class="tarrifs-card__text">Получайте ответы на любые ваши вопросы</p>
+                          </div>
+                        </div>
+                        <div class="settings-card__tarrifs-list-col">
+                          <div class="tarrifs-card">
+                            <div class="tarrifs-card__header">
+                              <p class="tarrifs-card__title">Доступ к ChatGPT 4o</p>
+                              <div class="tarrifs-card__status is-minus">
+                                <svg class="u-icon">
+                                  <use xlink:href="images/icons/icons.svg#minus"></use>
+                                </svg>
+                              </div>
+                            </div>
+                            <p class="tarrifs-card__text">Более точные и&nbsp;детализировнные ответы</p>
+                          </div>
+                        </div>
+                        <div class="settings-card__tarrifs-list-col">
+                          <div class="tarrifs-card">
+                            <div class="tarrifs-card__header">
+                              <p class="tarrifs-card__title">Продвинутые ИИ-инструменты</p>
+                              <div class="tarrifs-card__status is-minus">
+                                <svg class="u-icon">
+                                  <use xlink:href="images/icons/icons.svg#minus"></use>
+                                </svg>
+                              </div>
+                            </div>
+                            <p class="tarrifs-card__text">Обработка файлов, генерация изображений</p>
+                          </div>
+                        </div>
+                        <div class="settings-card__tarrifs-list-col">
+                          <div class="tarrifs-card">
+                            <div class="tarrifs-card__header">
+                              <p class="tarrifs-card__title">Безлимитные сообщения</p>
+                              <div class="tarrifs-card__status is-minus">
+                                <svg class="u-icon">
+                                  <use xlink:href="images/icons/icons.svg#minus"></use>
+                                </svg>
+                              </div>
+                            </div>
+                            <p class="tarrifs-card__text">Никаких лимитов на&nbsp;количество диалогов</p>
+                          </div>
+                        </div>
+                        <div class="settings-card__tarrifs-list-col">
+                          <div class="tarrifs-card">
+                            <div class="tarrifs-card__header">
+                              <p class="tarrifs-card__title">Отсутствие рекламы</p>
+                              <div class="tarrifs-card__status is-minus">
+                                <svg class="u-icon">
+                                  <use xlink:href="images/icons/icons.svg#minus"></use>
+                                </svg>
+                              </div>
+                            </div>
+                            <p class="tarrifs-card__text">Получайте ответы от&nbsp;ИИ без рекламы</p>
+                          </div>
+                        </div>
+                        <div class="settings-card__tarrifs-list-col">
+                          <div class="tarrifs-card">
+                            <div class="tarrifs-card__header">
+                              <p class="tarrifs-card__title">Чат в WhatsApp</p>
+                              <div class="tarrifs-card__status is-minus">
+                                <svg class="u-icon">
+                                  <use xlink:href="images/icons/icons.svg#minus"></use>
+                                </svg>
+                              </div>
+                            </div>
+                            <p class="tarrifs-card__text">Используйте нейросеть в&nbsp;привычном приложении</p>
+                          </div>
+                        </div>
+                      </div>
+                      <form action="#" class="settings-card__tarrifs-subscription">
+                        <div class="settings-card__tarrifs-subscription-item">
+                          <label class="subscription-choose">
+                            <input type="radio" name="subscription" class="subscription-choose__control" value="7 дней">
+                            <span class="subscription-choose__inner">
+                              <span class="subscription-choose__title">7 дней</span>
+                              <span class="subscription-choose__price">
+                                <span class="subscription-choose__price-old">1690₽</span>
+                                <span class="subscription-choose__price-new">890₽</span>
+                              </span>
+                            </span>
+                          </label>
+                        </div>
+                        <div class="settings-card__tarrifs-subscription-item">
+                          <label class="subscription-choose">
+                            <input type="radio" name="subscription" class="subscription-choose__control" checked value="3 дня на тест">
+                            <span class="subscription-choose__inner">
+                              <span class="subscription-choose__title">3 дня на тест</span>
+                              <span class="subscription-choose__price">
+                                <span class="subscription-choose__price-old">30₽</span>
+                                <span class="subscription-choose__price-new">1₽</span>
+                              </span>
+                            </span>
+                          </label>
+                        </div>
+                        <button type="button" class="btn btn--size-md btn--theme-accent-gradient settings-card__tarrifs-subscription-btn">
+                          <span class="btn__inner">
+                            <span class="btn__title">Подключить</span>
+                          </span>
+                        </button>
+                        <div class="settings-card__tarrifs-subscription-footer">
+                          <ul class="settings-card__tarrifs-subscription-footer-privacy">
+                            <li>
+                              <a href="privacy.html">Политика</a>
+                            </li>
+                            <li>
+                              <a href="terms.html">Условия</a>
+                            </li>
+                          </ul>
+                          <p class="settings-card__tarrifs-subscription-footer-desc">Отмена в любое время</p>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </main>
+          @@include('html/components/chat-profile-settings.html', {
+            'el': 'cosmo-chat__profile'
+          })
+        </div>
+      </div>
+      @@include('html/modal.html')
+    </div>
+
+    @@include('html/script.html')
+  </body>
+</html>

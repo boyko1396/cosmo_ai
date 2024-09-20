@@ -1,0 +1,128 @@
+.footer {
+  padding: 70rem 0;
+  font-weight: 300;
+  font-size: var(--fs-6);
+  position: relative;
+  z-index: 1;
+  @media (max-width: $md) {
+    padding: 50rem 0 70rem;
+  }
+  &__bg {
+    width: 1440rem;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    user-select: none;
+    z-index: -1;
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+  &__container {
+  }
+  &__row {
+    justify-content: space-between;
+    @media (min-width: $md-mf) {
+      flex-wrap: nowrap;
+    }
+    &-col {
+      & + & {
+        @media (max-width: $md) {
+        }
+      }
+      &--logo {
+        flex-shrink: 0;
+        @media (max-width: $md) {
+          max-width: 100%;
+          margin-bottom: 80rem;
+          flex-basis: 100%;
+        }
+      }
+      &--nav {
+        flex-grow: 1;
+        @media (max-width: $md) {
+        }
+      }
+      &--media {
+        flex-shrink: 0;
+        @media (max-width: $md) {
+          max-width: 100%;
+          flex-basis: 100%;
+        }
+      }
+    }
+  }
+  &__logo {
+    margin: 0 0 18rem;
+    vertical-align: top;
+  }
+  &__copyright {
+    font-size: var(--fs-9);
+    line-height: $lineHeight5;
+    opacity: .5;
+  }
+  &__nav {
+    display: flex;
+    justify-content: center;
+    @media (max-width: $md) {
+      justify-content: space-between;
+    }
+    &-list {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      & + & {
+        margin-left: 10%;
+      }
+    }
+    &-item {
+      margin: 0;
+      padding: 0;
+      &:not(:last-child) {
+        margin-bottom: 16rem;
+      }
+    }
+    &-title {
+      margin: 0;
+      padding: 0;
+      font-weight: bold;
+      color: $lilacColor;
+      text-transform: uppercase;
+      opacity: .8;
+      vertical-align: top;
+      @media (max-width: $md) {
+      }
+    }
+    &-link {
+      display: block;
+      opacity: .8;
+      transition: $transition;
+      @media (max-width: $lg) {
+      }
+      &:hover {
+        text-decoration: none;
+        @media (min-width: $lg-mf) {
+          color: $accentColor;
+        }
+      }
+    }
+  }
+  &__earth {
+    width: 181rem;
+    pointer-events: none;
+    user-select: none;
+    @media (max-width: $md) {
+      margin: 77rem 0 0 auto;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+}

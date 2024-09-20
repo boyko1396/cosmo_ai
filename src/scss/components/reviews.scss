@@ -1,0 +1,110 @@
+.reviews {
+  padding: 63rem 0;
+  @media (max-width: $md) {
+    padding: 50rem 0;
+  }
+  &__container {
+  }
+  &__title {
+    margin: 0 0 51rem;
+    text-transform: uppercase;
+    @media (max-width: $sm) {
+      margin-bottom: 154rem;
+      text-align: center;
+    }
+  }
+  &__slider {
+    margin-bottom: 54rem;
+    @media (max-width: $sm) {
+      margin-bottom: 30rem;
+    }
+    &.swiper {
+      overflow: visible;
+    }
+    .swiper-wrapper {
+    }
+    .swiper-slide {
+      display: flex;
+      flex-direction: column;
+      @media (min-width: $sm-mf) {
+        transition: $transition;
+        transition-property: transform, opacity, visibility;
+        opacity: 0;
+        visibility: hidden;
+      }
+      &-active,
+      &-next,
+      &-next + .swiper-slide {
+        @media (min-width: $sm-mf) {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+      &:nth-child(even) {
+        @media (min-width: $sm-mf) {
+          .reviews-card {
+            padding-bottom: 169rem;
+          }
+          .reviews-card__picture {
+            bottom: 0;
+          }
+        }
+      }
+      &:nth-child(odd) {
+        @media (min-width: $sm-mf) {
+          .reviews-card {
+            padding-top: 169rem;
+          }
+          .reviews-card__picture {
+            top: -10rem;
+          }
+        }
+      }
+      &:nth-child(3n+1) {
+        .reviews-card__picture {
+          filter: drop-shadow(-100px -122px 63px rgba(255, 255, 255, 0.01)) drop-shadow(-56px -69px 53px rgba(255, 255, 255, 0.05)) drop-shadow(-25px -30px 39px rgba(255, 255, 255, 0.09)) drop-shadow(-6px -8px 22px rgba(255, 255, 255, 0.1));
+        }
+      }
+      &:nth-child(3n+2) {
+        .reviews-card__picture {
+          filter: drop-shadow(106px 144px 71px rgba(255, 255, 255, 0.01)) drop-shadow(59px 81px 60px rgba(255, 255, 255, 0.05)) drop-shadow(26px 36px 45px rgba(255, 255, 255, 0.09)) drop-shadow(7px 9px 25px rgba(255, 255, 255, 0.1));
+        }
+      }
+      &:nth-child(3n+3) {
+        .reviews-card__picture {
+          filter: drop-shadow(81px -103px 52px rgba(255, 255, 255, 0.01)) drop-shadow(45px -58px 44px rgba(255, 255, 255, 0.05)) drop-shadow(20px -26px 33px rgba(255, 255, 255, 0.09)) drop-shadow(5px -6px 18px rgba(255, 255, 255, 0.1));
+        }
+      }
+    }
+    &-card {
+    }
+  }
+  &__footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media (max-width: $sm) {
+      flex-wrap: wrap;
+    }
+    &-btn {
+      min-width: 328rem;
+      margin-right: 60rem;
+      @media (max-width: $sm) {
+        max-width: 100%;
+        min-width: 0;
+        margin-right: 0;
+      }
+      @media (max-width: $xs) {
+        flex-basis: 100%;
+      }
+    }
+    &-slider-control {
+      @media (max-width: $sm) {
+        max-width: 100%;
+        margin: 0 0 30rem;
+        flex: 0 0 100%;
+        order: -1;
+      }
+    }
+  }
+}

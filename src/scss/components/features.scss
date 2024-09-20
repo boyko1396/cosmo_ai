@@ -1,0 +1,117 @@
+.features {
+  padding: 80rem 0;
+  @media (max-width: $md) {
+    padding: 55rem 0;
+  }
+  &__container {
+  }
+  &__title {
+    margin: 0 0 -8rem;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+    @media (max-width: $sm) {
+      margin-bottom: 40rem;
+    }
+  }
+  &__slider {
+    @media (max-width: $sm) {
+      margin-bottom: 20rem;
+    }
+    &.swiper {
+      overflow: visible;
+    }
+    .swiper-wrapper {
+    }
+    .swiper-slide {
+      padding: 80rem 0 100rem;
+      @media (max-width: $sm) {
+        padding: 0;
+      }
+    }
+    &-card {
+      width: 802rem;
+      @media (max-width: $md) {
+        width: 727rem;
+      }
+      @media (max-width: $sm) {
+        width: initial;
+        padding-top: 100rem;
+      }
+      &:nth-child(odd) {
+        padding-left: 250rem;
+        @media (max-width: $md) {
+          padding-left: 180rem;
+        }
+        @media (max-width: $sm) {
+          padding-left: 0;
+        }
+        .features-card__media {
+          left: 0;
+          filter: drop-shadow(159px -179px 96px rgba($whiteColor, .01)) drop-shadow(89px -101px 81px rgba($whiteColor, .05)) drop-shadow(40px -45px 60px rgba($whiteColor, .09)) drop-shadow(10px -11px 33px rgba($whiteColor, .1));
+          @media (max-width: $sm) {
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            filter: drop-shadow(159px -179px 96px rgba($whiteColor, .01)) drop-shadow(89px -101px 81px rgba($whiteColor, .05)) drop-shadow(40px -45px 60px rgba($whiteColor, .09)) drop-shadow(10px -11px 33px rgba($whiteColor, .1));
+          }
+        }
+      }
+      &:nth-child(even) {
+        margin-left: auto;
+        padding-right: 250rem;
+        @media (max-width: $md) {
+          padding-right: 180rem;
+        }
+        @media (max-width: $sm) {
+          padding-right: 0;
+        }
+        .features-card__media {
+          right: 0;
+          filter: drop-shadow(-195px -197px 111px rgba($whiteColor, .01)) drop-shadow(-110px -111px 93px rgba($whiteColor, .05)) drop-shadow(-49px -49px 69px rgba($whiteColor, .09)) drop-shadow(-12px -12px 38px rgba($whiteColor, .1));
+          @media (max-width: $sm) {
+            top: 0;
+            right: initial;
+            left: 50%;
+            transform: translateX(-50%);
+            filter: drop-shadow(159px -179px 96px rgba($whiteColor, .01)) drop-shadow(89px -101px 81px rgba($whiteColor, .05)) drop-shadow(40px -45px 60px rgba($whiteColor, .09)) drop-shadow(10px -11px 33px rgba($whiteColor, .1));
+          }
+        }
+      }
+      & + & {
+        @media (min-width: $sm-mf) {
+          margin-top: 50rem;
+        }
+      }
+    }
+  }
+  &__footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media (max-width: $sm) {
+      flex-wrap: wrap;
+    }
+    &-btn {
+      min-width: 328rem;
+      margin-right: 60rem;
+      @media (max-width: $sm) {
+        max-width: 100%;
+        min-width: 0;
+        margin-right: 0;
+      }
+      @media (max-width: $xs) {
+        flex-basis: 100%;
+      }
+    }
+    &-slider-control {
+      @media (max-width: $sm) {
+        max-width: 100%;
+        margin: 0 0 30rem;
+        flex: 0 0 100%;
+        order: -1;
+      }
+    }
+  }
+}

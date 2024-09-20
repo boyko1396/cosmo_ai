@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', {
+    'title': 'Cosmo AI - Login'
+  })
+  <body class="u-scrollbar">
+
+    <div id="root" class="site">
+      <div class="site__inner">
+        <!-- header BEGIN -->
+        @@include('html/components/header.html', {
+          'el': 'site__header'
+        })
+        <!-- header END -->
+        <main role="main" class="site__main">
+          <!-- user-page BEGIN -->
+          <section class="user-page">
+            <picture class="user-page__bg">
+              <!--<source
+                srcset="images/intro-hero-767.webp"
+                type="image/webp"
+                media="(max-width: 767px)">-->
+              <source 
+                srcset="images/intro-hero-767.jpg"
+                media="(max-width: 767px)">
+              <!--<source
+                srcset="images/intro-hero.webp"
+                type="image/webp">-->
+              <img
+                src="images/intro-hero.jpg"
+                alt="Вход"
+                width="1440"
+                height="800">
+            </picture>
+            <div class="container container--size-md user-page__container">
+              <div class="user-page__content">
+                <h1 class="user-page__title">Вход</h1>
+                <form action="#" class="user-page__form">
+                  <div class="row user-page__form-row">
+                    <div class="row__col--4 user-page__form-col user-page__form-col--input">
+                      <div class="u-input user-page__form-input">
+                        <label class="u-input__label">
+                          <input type="email" name="email" class="u-input__el u-input__el--type-text u-input__el--size-lg u-input__el--theme-grey-outline" required placeholder="Ваш Email">
+                        </label>
+                      </div>
+                    </div>
+                    <div class="row__col--4 user-page__form-col user-page__form-col--input">
+                      <div class="u-input user-page__form-input">
+                        <label class="u-input__label">
+                          <input type="password" name="password" class="u-input__el u-input__el--type-text u-input__el--size-lg u-input__el--theme-grey-outline" required placeholder="Пароль">
+                        </label>
+                      </div>
+                    </div>
+                    <div class="row__col--4 user-page__form-col user-page__form-col--btn">
+                      <button type="submit" class="btn btn--size-lg btn--theme-accent-gradient user-page__form-btn">
+                        <span class="btn__inner">
+                          <span class="btn__title">Войти</span>
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+                <div class="sc-auth user-page__sc-auth">
+                  <p class="sc-auth__title">Ещё нет аккаунта? <a href="registration.html" class="router-btn router-btn--theme-accent login-block__router-btn">Зарегистрироваться</a></p>
+                  <ul class="sc-auth__list">
+                    <li class="sc-auth__list-item">
+                      <button type="button" class="sc-auth__list-btn">
+                        <picture class="u-icon">
+                          <img src="images/svg/yandex-color.svg">
+                        </picture>
+                      </button>
+                    </li>
+                    <li class="sc-auth__list-item">
+                      <button type="button" class="sc-auth__list-btn">
+                        <picture class="u-icon">
+                          <img src="images/svg/vk-color.svg">
+                        </picture>
+                      </button>
+                    </li>
+                    <li class="sc-auth__list-item">
+                      <button type="button" class="sc-auth__list-btn">
+                        <picture class="u-icon">
+                          <img src="images/svg/google-color.svg">
+                        </picture>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="user-page__benefits">
+                <div class="row user-page__benefits-row">
+                  <div class="row__col--4 user-page__benefits-col">
+                    <div class="info-item user-page__benefits-item">
+                      <div class="info-item__inner">
+                        <picture class="info-item__icon">
+                          <img src="images/svg/check.svg" alt="Интуитивный интерфейс">
+                        </picture>
+                        <div class="info-item__content">
+                          <p class="info-item__title">Интуитивный интерфейс</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row__col--4 user-page__benefits-col">
+                    <div class="info-item user-page__benefits-item">
+                      <div class="info-item__inner">
+                        <picture class="info-item__icon">
+                          <img src="images/svg/docs-add.svg" alt="Качественная генерация">
+                        </picture>
+                        <div class="info-item__content">
+                          <p class="info-item__title">Качественная генерация</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row__col--4 user-page__benefits-col">
+                    <div class="info-item user-page__benefits-item">
+                      <div class="info-item__inner">
+                        <picture class="info-item__icon">
+                          <img src="images/svg/avg-pace.svg" alt="Высокая скорость">
+                        </picture>
+                        <div class="info-item__content">
+                          <p class="info-item__title">Высокая скорость</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- user-page END -->
+        </main>
+      </div>
+      @@include('html/modal.html')
+    </div>
+
+    @@include('html/script.html')
+  </body>
+</html>

@@ -1,0 +1,85 @@
+.benefits {
+  padding: 116rem 0 50rem;
+  @media (max-width: $md) {
+    padding: 50rem 0;
+  }
+  &__container {
+  }
+  &__title {
+    margin: 0 0 -34rem;
+    text-transform: uppercase;
+    @media (max-width: $sm) {
+      margin-bottom: -20rem;
+      text-align: center;
+    }
+  }
+  &__block {
+    height: 600rem;
+    position: relative;
+    @media (max-width: $sm) {
+      height: 500rem;
+    }
+    &-earth {
+      width: 1000rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      user-select: none;
+      z-index: -1;
+      @media (max-width: $sm) {
+        width: 800rem;
+      }
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+    }
+    &-list {
+      &-card {
+        position: absolute;
+        white-space: nowrap;
+        .info-item__title {
+          @media (max-width: $sm) {
+            margin-top: 4rem;
+            font-size: var(--fs-default);
+          }
+        }
+        &:nth-child(1) {
+          top: 7.9%;
+          left: 60.4%;
+          @media (max-width: $sm) {
+            top: 90%;
+            left: 7%;
+          }
+        }
+        &:nth-child(2) {
+          top: 29.6%;
+          left: 69.25%;
+          @media (max-width: $sm) {
+            top: 80%;
+            left: 46%;
+          }
+        }
+        &:nth-child(3) {
+          top: 36%;
+          left: 5.3%;
+          @media (max-width: $sm) {
+            top: 18%;
+            left: 5%;
+          }
+        }
+        &:nth-child(4) {
+          top: 64.8%;
+          left: 11%;
+          @media (max-width: $sm) {
+            top: 11%;
+            left: 36%;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,788 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <link rel="stylesheet" href="css/style.min.css??=v=20240920110631">
+  <link rel="apple-touch-icon" sizes="180x180" href="static/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="static/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="static/favicon/favicon-16x16.png">
+  <link rel="manifest" href="static/favicon/site.webmanifest">
+  <link rel="mask-icon" href="static/favicon/safari-pinned-tab.svg" color="#f46b45">
+  <link rel="shortcut icon" href="static/favicon/favicon.ico">
+  <meta name="msapplication-TileColor" content="#f46b45">
+  <meta name="msapplication-config" content="static/favicon/browserconfig.xml">
+  <meta name="theme-color" content="#f46b45">
+  <title>Cosmo AI - Chat</title>
+</head>
+  <body>
+
+    <div id="root" class="cosmo-chat">
+      <div class="cosmo-chat__inner">
+        <div class="cosmo-chat__body">
+          <header class="cosmo-chat__header cosmo-header">
+  <div class="cosmo-header__inner">
+    <div class="cosmo-header__top">
+      <button type="button" class="cosmo-header__toggle js-cosmo-header-toggle">
+        <picture>
+          <img src="images/svg/menu-open.svg" width="40" height="40">
+        </picture>
+        <picture>
+          <img src="images/svg/menu-close.svg" width="40" height="40">
+        </picture>
+      </button>
+      <a href="chat.html" class="cosmo-header__new-chat">
+        <picture>
+          <img src="images/svg/plus-type-2.svg" width="20" height="20">
+        </picture>
+        <span class="cosmo-header__new-chat-title">Новый чат</span>
+      </a>
+      <ul class="cosmo-header__tab-nav js-chat-tab-nav">
+        <li>
+          <a href="#history-chat" class="is-active">История чатов</a>
+        </li>
+        <li>
+          <a href="#history-tools">Инструменты</a>
+        </li>
+      </ul>
+    </div>
+    <div class="u-scrollbar cosmo-header__dropdown">
+      <div class="cosmo-header__tab-content">
+        <div id="history-chat" class="cosmo-header__tab-item js-chat-tab-content is-show">
+          <div class="cosmo-header__tab-list">
+            <div class="cosmo-header__tab-list-item">
+              <p class="cosmo-header__tab-list-item-day">Сегодня</p>
+              <div class="cosmo-header__tab-list-item-card history-item">
+                <div class="history-item__content">
+                  <h3 class="history-item__title">
+                    <a href="#" class="history-item__link">Название чата 1</a>
+                  </h3>
+                </div>
+              </div>
+              <div class="cosmo-header__tab-list-item-card history-item">
+                <div class="history-item__content">
+                  <h3 class="history-item__title">
+                    <a href="#" class="history-item__link">Название чата 2</a>
+                  </h3>
+                </div>
+              </div>
+              <div class="cosmo-header__tab-list-item-card history-item">
+                <div class="history-item__content">
+                  <h3 class="history-item__title">
+                    <a href="#" class="history-item__link">Название чата 3</a>
+                  </h3>
+                </div>
+              </div>
+              <div class="cosmo-header__tab-list-item-card history-item">
+                <div class="history-item__content">
+                  <h3 class="history-item__title">
+                    <a href="#" class="history-item__link">Название чата 4</a>
+                  </h3>
+                </div>
+              </div>
+              <div class="cosmo-header__tab-list-item-card history-item">
+                <div class="history-item__content">
+                  <h3 class="history-item__title">
+                    <a href="#" class="history-item__link">Название чата 5</a>
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div class="cosmo-header__tab-list-item">
+              <p class="cosmo-header__tab-list-item-day">Предыдущая неделя</p>
+              <div class="cosmo-header__tab-list-item-card history-item">
+                <div class="history-item__content">
+                  <h3 class="history-item__title">
+                    <a href="#" class="history-item__link">Название чата 1</a>
+                  </h3>
+                </div>
+              </div>
+              <div class="cosmo-header__tab-list-item-card history-item">
+                <div class="history-item__content">
+                  <h3 class="history-item__title">
+                    <a href="#" class="history-item__link">Название чата 2</a>
+                  </h3>
+                </div>
+              </div>
+              <div class="cosmo-header__tab-list-item-card history-item">
+                <div class="history-item__content">
+                  <h3 class="history-item__title">
+                    <a href="#" class="history-item__link">Название чата 3</a>
+                  </h3>
+                </div>
+              </div>
+              <div class="cosmo-header__tab-list-item-card history-item">
+                <div class="history-item__content">
+                  <h3 class="history-item__title">
+                    <a href="#" class="history-item__link">Название чата 4</a>
+                  </h3>
+                </div>
+              </div>
+              <div class="cosmo-header__tab-list-item-card history-item">
+                <div class="history-item__content">
+                  <h3 class="history-item__title">
+                    <a href="#" class="history-item__link">Название чата 5</a>
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="history-tools" class="cosmo-header__tab-item js-chat-tab-content">
+          <div class="cosmo-header__tab-list">
+            <div class="cosmo-header__tab-list-item">
+              <p class="cosmo-header__tab-list-item-day">Сегодня</p>
+              <div class="cosmo-header__tab-list-item-card history-item">
+                <div class="history-item__content">
+                  <p class="history-item__type">Генератор изображений</p>
+                  <h3 class="history-item__title">
+                    <a href="#" class="history-item__link">Содержание чата 1</a>
+                  </h3>
+                </div>
+              </div>
+              <div class="cosmo-header__tab-list-item-card history-item">
+                <div class="history-item__content">
+                  <p class="history-item__type">Загрузи и спроси</p>
+                  <h3 class="history-item__title">
+                    <a href="#" class="history-item__link">Содержание чата 2</a>
+                  </h3>
+                </div>
+              </div>
+              <div class="cosmo-header__tab-list-item-card history-item">
+                <div class="history-item__content">
+                  <p class="history-item__type">Вставь ссылку и спроси</p>
+                  <h3 class="history-item__title">
+                    <a href="#" class="history-item__link">Содержание чата 3</a>
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div class="cosmo-header__tab-list-item">
+              <p class="cosmo-header__tab-list-item-day">Предыдущая неделя</p>
+              <div class="cosmo-header__tab-list-item-card history-item">
+                <div class="history-item__content">
+                  <p class="history-item__type">Чат с нейросетью</p>
+                  <h3 class="history-item__title">
+                    <a href="#" class="history-item__link">Содержание чата 1</a>
+                  </h3>
+                </div>
+              </div>
+              <div class="cosmo-header__tab-list-item-card history-item">
+                <div class="history-item__content">
+                  <p class="history-item__type">Краткое содержание статьи</p>
+                  <h3 class="history-item__title">
+                    <a href="#" class="history-item__link">Содержание чата 2</a>
+                  </h3>
+                </div>
+              </div>
+              <div class="cosmo-header__tab-list-item-card history-item">
+                <div class="history-item__content">
+                  <p class="history-item__type">Генератор изображений</p>
+                  <h3 class="history-item__title">
+                    <a href="#" class="history-item__link">Содержание чата 3</a>
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+          <main class="cosmo-chat-main cosmo-chat__main" role="main">
+            <div class="u-scrollbar cosmo-chat-main__body">
+              <h1 class="cosmo-chat-main__title">Чат с нейросетью</h1>
+              <p class="cosmo-chat-main__subtitle">Здравствуйте! <br class="d-lg-block">Чем я могу Вам помочь?</p>
+              <div class="cosmo-chat-main__hint js-chat-hint-wrapper">
+                <div class="cosmo-chat-main__hint-main">
+                  <div class="cosmo-chat-main__hint-list">
+                    <div class="cosmo-chat-main__hint-list-card">
+                      <button type="button" class="btn btn--size-semi-md btn--theme-grey-outline cosmo-chat-main__hint-btn js-chat-hint">
+                        <span class="btn__inner">
+                          <span class="btn__title">Новые технологии</span>
+                        </span>
+                      </button>
+                    </div>
+                    <div class="cosmo-chat-main__hint-list-card">
+                      <button type="button" class="btn btn--size-semi-md btn--theme-grey-outline cosmo-chat-main__hint-btn js-chat-hint">
+                        <span class="btn__inner">
+                          <span class="btn__title">План поездки</span>
+                        </span>
+                      </button>
+                    </div>
+                    <div class="cosmo-chat-main__hint-list-card">
+                      <button type="button" class="btn btn--size-semi-md btn--theme-grey-outline cosmo-chat-main__hint-btn js-chat-hint">
+                        <span class="btn__inner">
+                          <span class="btn__title">Резюме</span>
+                        </span>
+                      </button>
+                    </div>
+                    <div class="cosmo-chat-main__hint-list-card">
+                      <button type="button" class="btn btn--size-semi-md btn--theme-grey-outline cosmo-chat-main__hint-btn js-chat-hint">
+                        <span class="btn__inner">
+                          <span class="btn__title">Бизнес</span>
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="cosmo-chat-main__hint-submain">
+                  <div class="cosmo-chat-main__hint-list js-chat-hint-dropdown">
+                    <div class="cosmo-chat-main__hint-list-card">
+                      <button type="button" class="btn btn--size-semi-md btn--theme-grey-outline cosmo-chat-main__hint-btn" data-chat-hint="Резюме hint">
+                        <span class="btn__inner">
+                          <span class="btn__title">Новые технологии 1</span>
+                        </span>
+                      </button>
+                    </div>
+                    <div class="cosmo-chat-main__hint-list-card">
+                      <button type="button" class="btn btn--size-semi-md btn--theme-grey-outline cosmo-chat-main__hint-btn" data-chat-hint="Бизнес hint">
+                        <span class="btn__inner">
+                          <span class="btn__title">Новые технологии 2</span>
+                        </span>
+                      </button>
+                    </div>
+                    <div class="cosmo-chat-main__hint-list-card">
+                      <button type="button" class="btn btn--size-semi-md btn--theme-grey-outline cosmo-chat-main__hint-btn" data-chat-hint="План поездки hint">
+                        <span class="btn__inner">
+                          <span class="btn__title">Новые технологии 3</span>
+                        </span>
+                      </button>
+                    </div>
+                    <div class="cosmo-chat-main__hint-list-card">
+                      <button type="button" class="btn btn--size-semi-md btn--theme-grey-outline cosmo-chat-main__hint-btn" data-chat-hint="Новые технологии hint">
+                        <span class="btn__inner">
+                          <span class="btn__title">Новые технологии 4</span>
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="cosmo-chat-main__hint-list js-chat-hint-dropdown">
+                    <div class="cosmo-chat-main__hint-list-card">
+                      <button type="button" class="btn btn--size-semi-md btn--theme-grey-outline cosmo-chat-main__hint-btn" data-chat-hint="Резюме hint">
+                        <span class="btn__inner">
+                          <span class="btn__title">План поездки 1</span>
+                        </span>
+                      </button>
+                    </div>
+                    <div class="cosmo-chat-main__hint-list-card">
+                      <button type="button" class="btn btn--size-semi-md btn--theme-grey-outline cosmo-chat-main__hint-btn" data-chat-hint="Бизнес hint">
+                        <span class="btn__inner">
+                          <span class="btn__title">План поездки 2</span>
+                        </span>
+                      </button>
+                    </div>
+                    <div class="cosmo-chat-main__hint-list-card">
+                      <button type="button" class="btn btn--size-semi-md btn--theme-grey-outline cosmo-chat-main__hint-btn" data-chat-hint="План поездки hint">
+                        <span class="btn__inner">
+                          <span class="btn__title">План поездки 3</span>
+                        </span>
+                      </button>
+                    </div>
+                    <div class="cosmo-chat-main__hint-list-card">
+                      <button type="button" class="btn btn--size-semi-md btn--theme-grey-outline cosmo-chat-main__hint-btn" data-chat-hint="Новые технологии hint">
+                        <span class="btn__inner">
+                          <span class="btn__title">План поездки 4</span>
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="cosmo-chat-main__hint-list js-chat-hint-dropdown">
+                    <div class="cosmo-chat-main__hint-list-card">
+                      <button type="button" class="btn btn--size-semi-md btn--theme-grey-outline cosmo-chat-main__hint-btn" data-chat-hint="Резюме hint">
+                        <span class="btn__inner">
+                          <span class="btn__title">Резюме 1</span>
+                        </span>
+                      </button>
+                    </div>
+                    <div class="cosmo-chat-main__hint-list-card">
+                      <button type="button" class="btn btn--size-semi-md btn--theme-grey-outline cosmo-chat-main__hint-btn" data-chat-hint="Бизнес hint">
+                        <span class="btn__inner">
+                          <span class="btn__title">Резюме 2</span>
+                        </span>
+                      </button>
+                    </div>
+                    <div class="cosmo-chat-main__hint-list-card">
+                      <button type="button" class="btn btn--size-semi-md btn--theme-grey-outline cosmo-chat-main__hint-btn" data-chat-hint="План поездки hint">
+                        <span class="btn__inner">
+                          <span class="btn__title">Резюме 3</span>
+                        </span>
+                      </button>
+                    </div>
+                    <div class="cosmo-chat-main__hint-list-card">
+                      <button type="button" class="btn btn--size-semi-md btn--theme-grey-outline cosmo-chat-main__hint-btn" data-chat-hint="Новые технологии hint">
+                        <span class="btn__inner">
+                          <span class="btn__title">Резюме 4</span>
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="cosmo-chat-main__hint-list js-chat-hint-dropdown">
+                    <div class="cosmo-chat-main__hint-list-card">
+                      <button type="button" class="btn btn--size-semi-md btn--theme-grey-outline cosmo-chat-main__hint-btn" data-chat-hint="Резюме hint">
+                        <span class="btn__inner">
+                          <span class="btn__title">Бизнес 1</span>
+                        </span>
+                      </button>
+                    </div>
+                    <div class="cosmo-chat-main__hint-list-card">
+                      <button type="button" class="btn btn--size-semi-md btn--theme-grey-outline cosmo-chat-main__hint-btn" data-chat-hint="Бизнес hint">
+                        <span class="btn__inner">
+                          <span class="btn__title">Бизнес 2</span>
+                        </span>
+                      </button>
+                    </div>
+                    <div class="cosmo-chat-main__hint-list-card">
+                      <button type="button" class="btn btn--size-semi-md btn--theme-grey-outline cosmo-chat-main__hint-btn" data-chat-hint="План поездки hint">
+                        <span class="btn__inner">
+                          <span class="btn__title">Бизнес 3</span>
+                        </span>
+                      </button>
+                    </div>
+                    <div class="cosmo-chat-main__hint-list-card">
+                      <button type="button" class="btn btn--size-semi-md btn--theme-grey-outline cosmo-chat-main__hint-btn" data-chat-hint="Новые технологии hint">
+                        <span class="btn__inner">
+                          <span class="btn__title">Бизнес 4</span>
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cosmo-chat-main__footer">
+              <div class="cosmo-chat-main__footer-area">
+                <div class="cosmo-chat-main__footer-aside">
+                  <div class="chat-version cosmo-chat-main__footer-chat-version js-chat-version">
+                    <div class="chat-version__inner">
+                      <div class="chat-version__dropdown">
+                        <button type="button" data-version="GPT-3.5" class="is-active chat-version__dropdown-btn js-chat-version-switch">GPT-3.5</button>
+                        <button type="button" data-version="GPT-4o" class="chat-version__dropdown-btn js-chat-version-switch">GPT-4o</button>
+                      </div>
+                      <button type="button" class="chat-version__toggle js-chat-version-toggle">
+                        <span class="chat-version__toggle-title"></span>
+                        <picture class="chat-version__toggle-icon">
+                          <img src="images/svg/arrow-type-1.svg">
+                        </picture>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="cosmo-chat-main__footer-type-chat js-type-chat type-chat">
+                  <button type="button" class="js-type-chat-toggle type-chat__toggle">
+                    <picture class="type-chat__toggle-icon">
+                      <img src="images/svg/type-chat-1.svg" alt="Чат с нейросетью">
+                    </picture>
+                  </button>
+                  <div class="type-chat__dropdown">
+                    <button type="button" data-modal="popup-chat-link-ask" class="js-type-chat-btn type-chat__dropdown-btn">
+                      <picture class="type-chat__dropdown-btn-icon">
+                        <img src="images/svg/type-chat-7.svg" alt="Вставь ссылку и спроси">
+                      </picture>
+                      <span class="type-chat__dropdown-btn-title">Вставь ссылку и спроси</span>
+                    </button>
+                    <button type="button" data-modal="popup-chat-article" class="js-type-chat-btn type-chat__dropdown-btn">
+                      <picture class="type-chat__dropdown-btn-icon">
+                        <img src="images/svg/type-chat-6.svg" alt="Краткое содержание статьи">
+                      </picture>
+                      <span class="type-chat__dropdown-btn-title">Краткое содержание статьи</span>
+                    </button>
+                    <button type="button" data-modal="popup-chat-youtube" class="js-type-chat-btn type-chat__dropdown-btn">
+                      <picture class="type-chat__dropdown-btn-icon">
+                        <img src="images/svg/type-chat-5.svg" alt="Краткое содержание YouTube-видео ">
+                      </picture>
+                      <span class="type-chat__dropdown-btn-title">Краткое содержание YouTube-видео</span>
+                    </button>
+                    <button type="button" data-modal="popup-chat-youtube-ask" class="js-type-chat-btn type-chat__dropdown-btn">
+                      <picture class="type-chat__dropdown-btn-icon">
+                        <img src="images/svg/type-chat-4.svg" alt="YouTube и спроситью">
+                      </picture>
+                      <span class="type-chat__dropdown-btn-title">YouTube и спроси</span>
+                    </button>
+                    <button type="button" data-modal="popup-chat-download-ask" class="js-type-chat-btn type-chat__dropdown-btn">
+                      <picture class="type-chat__dropdown-btn-icon">
+                        <img src="images/svg/type-chat-3.svg" alt="Загрузи и спроситью">
+                      </picture>
+                      <span class="type-chat__dropdown-btn-title">Загрузи и спроси</span>
+                    </button>
+                    <a href="chat_images.html" class="js-type-chat-btn type-chat__dropdown-btn">
+                      <picture class="type-chat__dropdown-btn-icon">
+                        <img src="images/svg/type-chat-2.svg" alt="Генератор изображений">
+                      </picture>
+                      <span class="type-chat__dropdown-btn-title">Генератор изображений</span>
+                    </a>
+                    <a href="chat.html" class="js-type-chat-btn type-chat__dropdown-btn is-active">
+                      <picture class="type-chat__dropdown-btn-icon">
+                        <img src="images/svg/type-chat-1.svg" alt="Чат с нейросетью">
+                      </picture>
+                      <span class="type-chat__dropdown-btn-title">Чат с нейросетью</span>
+                    </a>
+                  </div>
+                </div>
+                <form action="#" class="cosmo-chat-main__footer-form">
+                  <textarea name="message" cols="" rows="1" class="u-scrollbar cosmo-chat-main__footer-form-textarea js-chat-textarea" placeholder="Введите запрос"></textarea>
+                  <button type="button" class="cosmo-chat-main__footer-form-btn-send js-chat-btn-send" disabled="disabled" title="Отправить">
+                    <picture>
+                      <img src="images/svg/send.svg" alt="Отправить">
+                    </picture>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </main>
+          <div class="cosmo-chat-profile cosmo-chat__profile">
+  <a href="settings.html" class="btn btn--theme-accent-gradient btn--size-semi cosmo-chat-profile__btn">
+    <span class="btn__inner">
+      <span class="btn__title">example@mail.ru</span>
+      <span class="btn__icon btn__icon--dir-rtl">
+        <svg class="u-icon">
+          <use xlink:href="images/icons/icons.svg#profile"></use>
+        </svg>
+      </span>
+    </span>
+  </a>
+</div>
+        </div>
+      </div>
+      <div class="u-scrollbar popup" data-popup="popup-chat-download-ask" data-close-overlay>
+  <div class="popup__wrapper" data-close-overlay>
+    <div class="popup__content popup__content--size-lg popup__content--theme-black-1">
+      <picture class="popup__bg">
+        
+        <source srcset="images/modal-bg-1-767.jpg" media="(max-width: 767px)">
+        
+        <img src="images/modal-bg-1.jpg" alt="Загрузи и спроси" width="1200" height="600">
+      </picture>
+      <button type="button" class="js-button-close popup__btn-close">
+        <svg class="u-icon btn-close__icon">
+          <use xlink:href="images/icons/icons.svg#close"></use>
+        </svg>
+      </button>
+      <div class="popup__inner">
+        <form action="#" class="popup__chat">
+          <div class="popup__chat-content">
+            <p class="fs-2 popup__chat-title title">Загрузи и спроси</p>
+            <p class="popup__chat-subtitle">Задайте любой вопрос по документу</p>
+            <div class="popup__chat-upload-file upload-file">
+              <input type="file" name="attach-file" id="attach-file-1" class="upload-file__control" value="">
+              <div class="upload-file__inner">
+                <label for="attach-file-1" class="upload-file__label">
+                  <span class="upload-file__body">
+                    <picture class="upload-file__picture">
+                      <img src="images/svg/upload-file.svg" alt="Перетащите или выберите файл">
+                    </picture>
+                    <span class="upload-file__title d-lg-none">Перетащите или <span class="color-accent">выберите</span> файл</span>
+                    <span class="upload-file__title d-lg-block"><span class="color-accent">Выберите</span> файл</span>
+                  </span>
+                </label>
+              </div>
+              <div class="upload-file__limitation">
+                <p class="upload-file__limitation-text">Поддерживаемые форматы: <strong>PDF, DOC, XLSX</strong></p>
+                <p class="upload-file__limitation-text">Макс. размер файла: <strong>20mb</strong></p>
+              </div>
+            </div>
+          </div>
+          <div class="popup__chat-body">
+            <div class="popup__chat-body-input u-input">
+              <label class="u-input__label">
+                <input type="text" name="request" class="u-input__el u-input__el--size-lg u-input__el--theme-grey-outline u-input__el--type-text" required placeholder="Ваш запрос">
+              </label>
+            </div>
+            <button type="submit" class="btn btn--size-lg popup__chat-body-btn btn--theme-accent-gradient">
+              <span class="btn__inner">
+                <span class="btn__title">Спросить</span>
+              </span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="u-scrollbar popup" data-popup="popup-chat-link-ask" data-close-overlay>
+  <div class="popup__wrapper" data-close-overlay>
+    <div class="popup__content popup__content--size-lg popup__content--theme-black-1">
+      <picture class="popup__bg">
+        
+        <source srcset="images/modal-bg-1-767.jpg" media="(max-width: 767px)">
+        
+        <img src="images/modal-bg-1.jpg" alt="Вставь ссылку и спроси" width="1200" height="600">
+      </picture>
+      <button type="button" class="js-button-close popup__btn-close">
+        <svg class="u-icon btn-close__icon">
+          <use xlink:href="images/icons/icons.svg#close"></use>
+        </svg>
+      </button>
+      <div class="popup__inner">
+        <form action="#" class="popup__chat">
+          <div class="popup__chat-content">
+            <p class="fs-2 popup__chat-title title">Вставь ссылку и&nbsp;спроси</p>
+            <p class="popup__chat-subtitle">Спросите или найдите<br>что угодно в интернете</p>
+          </div>
+          <div class="popup__chat-body">
+            <div class="popup__chat-body-input u-input">
+              <label class="u-input__label">
+                <input type="text" name="link" class="u-input__el u-input__el--size-lg u-input__el--theme-grey-outline u-input__el--type-text" required placeholder="Ссылка на сайт">
+              </label>
+            </div>
+            <div class="popup__chat-body-input u-input">
+              <label class="u-input__label">
+                <input type="text" name="request" class="u-input__el u-input__el--size-lg u-input__el--theme-grey-outline u-input__el--type-text" required placeholder="Ваш запрос">
+              </label>
+            </div>
+            <button type="submit" class="btn btn--size-lg popup__chat-body-btn btn--theme-accent-gradient">
+              <span class="btn__inner">
+                <span class="btn__title">Спросить</span>
+              </span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="u-scrollbar popup" data-popup="popup-chat-youtube-ask" data-close-overlay>
+  <div class="popup__wrapper" data-close-overlay>
+    <div class="popup__content popup__content--size-lg popup__content--theme-black-1">
+      <picture class="popup__bg">
+        
+        <source srcset="images/modal-bg-1-767.jpg" media="(max-width: 767px)">
+        
+        <img src="images/modal-bg-1.jpg" alt="YouTube и спроси" width="1200" height="600">
+      </picture>
+      <button type="button" class="js-button-close popup__btn-close">
+        <svg class="u-icon btn-close__icon">
+          <use xlink:href="images/icons/icons.svg#close"></use>
+        </svg>
+      </button>
+      <div class="popup__inner">
+        <form action="#" class="popup__chat">
+          <div class="popup__chat-content">
+            <p class="fs-2 popup__chat-title title">YouTube и спроси</p>
+            <p class="popup__chat-subtitle">Спросите что угодно о видео с YouTube</p>
+          </div>
+          <div class="popup__chat-body">
+            <div class="popup__chat-body-input u-input">
+              <label class="u-input__label">
+                <input type="text" name="link" class="u-input__el u-input__el--size-lg u-input__el--theme-grey-outline u-input__el--type-text" required placeholder="Ссылка на видео">
+              </label>
+            </div>
+            <div class="popup__chat-body-input u-input">
+              <label class="u-input__label">
+                <input type="text" name="request" class="u-input__el u-input__el--size-lg u-input__el--theme-grey-outline u-input__el--type-text" required placeholder="Ваш запрос">
+              </label>
+            </div>
+            <button type="submit" class="btn btn--size-lg popup__chat-body-btn btn--theme-accent-gradient">
+              <span class="btn__inner">
+                <span class="btn__title">Спросить</span>
+              </span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="u-scrollbar popup" data-popup="popup-chat-youtube" data-close-overlay>
+  <div class="popup__wrapper" data-close-overlay>
+    <div class="popup__content popup__content--size-lg popup__content--theme-black-1">
+      <picture class="popup__bg">
+        
+        <source srcset="images/modal-bg-1-767.jpg" media="(max-width: 767px)">
+        
+        <img src="images/modal-bg-1.jpg" alt="Вставь ссылку и спроси" width="1200" height="600">
+      </picture>
+      <button type="button" class="js-button-close popup__btn-close">
+        <svg class="u-icon btn-close__icon">
+          <use xlink:href="images/icons/icons.svg#close"></use>
+        </svg>
+      </button>
+      <div class="popup__inner">
+        <form action="#" class="popup__chat">
+          <div class="popup__chat-content">
+            <p class="fs-2 popup__chat-title title">Краткое содержание YouTube&nbsp;видео</p>
+            <p class="popup__chat-subtitle">Получите детальную выжимку<br>о&nbsp;видео с YouTube</p>
+          </div>
+          <div class="popup__chat-body">
+            <div class="popup__chat-body-input u-input">
+              <label class="u-input__label">
+                <input type="text" name="link" class="u-input__el u-input__el--size-lg u-input__el--theme-grey-outline u-input__el--type-text" required placeholder="Ссылка на видео">
+              </label>
+            </div>
+            <button type="submit" class="btn btn--size-lg popup__chat-body-btn btn--theme-accent-gradient">
+              <span class="btn__inner">
+                <span class="btn__title">Спросить</span>
+              </span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="u-scrollbar popup" data-popup="popup-chat-article" data-close-overlay>
+  <div class="popup__wrapper" data-close-overlay>
+    <div class="popup__content popup__content--size-lg popup__content--theme-black-1">
+      <picture class="popup__bg">
+        
+        <source srcset="images/modal-bg-1-767.jpg" media="(max-width: 767px)">
+        
+        <img src="images/modal-bg-1.jpg" alt="Краткое содержание статьи" width="1200" height="600">
+      </picture>
+      <button type="button" class="js-button-close popup__btn-close">
+        <svg class="u-icon btn-close__icon">
+          <use xlink:href="images/icons/icons.svg#close"></use>
+        </svg>
+      </button>
+      <div class="popup__inner">
+        <form action="#" class="popup__chat">
+          <div class="popup__chat-content">
+            <p class="fs-2 popup__chat-title title">Краткое содержание статьи</p>
+            <p class="popup__chat-subtitle">Получите детальную выжимку из статьи</p>
+            <div class="popup__chat-upload-file upload-file">
+              <input type="file" name="attach-file" id="attach-file-2" class="upload-file__control" value="">
+              <div class="upload-file__inner">
+                <label for="attach-file-2" class="upload-file__label">
+                  <span class="upload-file__body">
+                    <picture class="upload-file__picture">
+                      <img src="images/svg/upload-file.svg" alt="Перетащите или выберите файл">
+                    </picture>
+                    <span class="upload-file__title d-lg-none">Перетащите или <span class="color-accent">выберите</span> файл</span>
+                    <span class="upload-file__title d-lg-block"><span class="color-accent">Выберите</span> файл</span>
+                  </span>
+                </label>
+              </div>
+              <div class="upload-file__limitation">
+                <p class="upload-file__limitation-text">Поддерживаемые форматы: <strong>PDF, DOC, XLSX</strong></p>
+                <p class="upload-file__limitation-text">Макс. размер файла: <strong>20mb</strong></p>
+              </div>
+            </div>
+          </div>
+          <div class="popup__chat-body">
+            <button type="submit" class="btn btn--size-lg popup__chat-body-btn btn--theme-accent-gradient">
+              <span class="btn__inner">
+                <span class="btn__title">Спросить</span>
+              </span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="u-scrollbar popup" data-popup="popup-subscribe" data-close-overlay>
+  <div class="popup__wrapper" data-close-overlay>
+    <div class="popup__content popup__content--size-lg popup__content--theme-black-1">
+      <picture class="popup__bg">
+        
+        <source srcset="images/modal-bg-1-767.jpg" media="(max-width: 767px)">
+        
+        <img src="images/modal-bg-1.jpg" alt="Вы уверены, что хотите отменить подписку?" width="1200" height="600">
+      </picture>
+      <button type="button" class="js-button-close popup__btn-close">
+        <svg class="u-icon btn-close__icon">
+          <use xlink:href="images/icons/icons.svg#close"></use>
+        </svg>
+      </button>
+      <div class="popup__inner">
+        <form action="#" class="popup__chat">
+          <div class="popup__chat-content">
+            <p class="fs-2 popup__chat-title title">Вы уверены, что хотите отменить подписку?</p>
+          </div>
+          <div class="popup__chat-body">
+            <button type="button" class="btn btn--size-lg popup__chat-body-btn btn--theme-accent-gradient">
+              <span class="btn__inner">
+                <span class="btn__title">Нет, я передумал</span>
+              </span>
+            </button>
+            <button type="button" class="btn btn--size-lg popup__chat-body-btn btn--theme-white-outline">
+              <span class="btn__inner">
+                <span class="btn__title">Да</span>
+              </span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="u-scrollbar popup" data-popup="popup-registration" data-close-overlay>
+  <div class="popup__wrapper" data-close-overlay>
+    <div class="popup__content popup__content--size-lg popup__content--theme-black-1">
+      <picture class="popup__bg">
+        
+        <source srcset="images/modal-bg-1-767.jpg" media="(max-width: 767px)">
+        
+        <img src="images/modal-bg-1.jpg" alt="Регистрация" width="1200" height="600">
+      </picture>
+      <button type="button" class="js-button-close popup__btn-close">
+        <svg class="u-icon btn-close__icon">
+          <use xlink:href="images/icons/icons.svg#close"></use>
+        </svg>
+      </button>
+      <div class="popup__inner">
+        <form action="#" class="popup__chat">
+          <div class="popup__chat-content">
+            <p class="fs-2 popup__chat-title title">Регистрация</p>
+            <div class="popup__chat-sc-auth sc-auth">
+              <p class="sc-auth__title">Уже есть аккаунт? <a href="login.html" class="login-block__router-btn router-btn router-btn--theme-accent">Войти</a></p>
+              <ul class="sc-auth__list">
+                <li class="sc-auth__list-item">
+                  <button type="button" class="sc-auth__list-btn">
+                    <picture class="u-icon">
+                      <img src="images/svg/yandex-color.svg">
+                    </picture>
+                  </button>
+                </li>
+                <li class="sc-auth__list-item">
+                  <button type="button" class="sc-auth__list-btn">
+                    <picture class="u-icon">
+                      <img src="images/svg/vk-color.svg">
+                    </picture>
+                  </button>
+                </li>
+                <li class="sc-auth__list-item">
+                  <button type="button" class="sc-auth__list-btn">
+                    <picture class="u-icon">
+                      <img src="images/svg/google-color.svg">
+                    </picture>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="popup__chat-body">
+            <div class="popup__chat-body-input u-input">
+              <label class="u-input__label">
+                <input type="email" name="email" class="u-input__el u-input__el--size-lg u-input__el--theme-grey-outline u-input__el--type-text" required placeholder="Email">
+              </label>
+            </div>
+            <div class="popup__chat-body-input u-input">
+              <label class="u-input__label">
+                <input type="password" name="password" class="u-input__el u-input__el--size-lg u-input__el--theme-grey-outline u-input__el--type-text" required placeholder="Пароль">
+              </label>
+            </div>
+            <button type="submit" class="btn btn--size-lg popup__chat-body-btn btn--theme-accent-gradient">
+              <span class="btn__inner">
+                <span class="btn__title">Зарегистрироваться</span>
+              </span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
+
+    <script src="js/app.min.js??=v=20240920110631"></script>
+  </body>
+</html>

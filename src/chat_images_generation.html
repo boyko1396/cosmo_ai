@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', {
+    'title': 'Cosmo AI - Chat images generation'
+  })
+  <body>
+
+    <div id="root" class="cosmo-chat">
+      <div class="cosmo-chat__inner">
+        <div class="cosmo-chat__body">
+          @@include('html/components/chat-header.html', {
+            'el': 'cosmo-chat__header'
+          })
+          <main class="cosmo-chat-main cosmo-chat__main" role="main">
+            <div class="u-scrollbar cosmo-chat-main__body">
+              <h1 class="cosmo-chat-main__title">Генератор изображений</h1>
+              <div class="chat-main__body-message-list">
+                <div class="chat-message chat-message--user chat-main__message">
+                  <div class="chat-message__inner">
+                    <div class="chat-message__header">
+                      <div class="chat-message__question">Абстрактная фигура, белый, черный и синий цвета, 3d рендер</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="chat-message chat-message--bot chat-main__message">
+                  <div class="chat-message__inner">
+                    <div class="chat-message__header">
+                      <div class="chat-message__question">Абстрактная фигура, белый, черный и синий цвета, 3d рендер</div>
+                    </div>
+                    <div class="chat-message__images">
+                      <div class="chat-message__images-col">
+                        <picture class="chat-message__images-item">
+                          <img src="images/answer-1.svg">
+                        </picture>
+                      </div>
+                      <div class="chat-message__images-col">
+                        <picture class="chat-message__images-item">
+                          <img src="images/answer-1.svg">
+                        </picture>
+                      </div>
+                    </div>
+                    <div class="btn-group btn-group--gap-sm chat-message__action">
+                      <div class="btn-group__inner">
+                        <div class="btn-group__col">
+                          <button type="button" class="btn btn--size-xs btn--theme-grey-outline btn-group__el">
+                            <span class="btn__inner">
+                              <span class="btn__icon btn__icon--dir-rtl">
+                                <svg class="u-icon">
+                                  <use xlink:href="images/icons/icons.svg#copy"></use>
+                                </svg>
+                              </span>
+                              <span class="btn__title">Копировать</span>
+                            </span>
+                          </button>
+                        </div>
+                        <div class="btn-group__col">
+                          <button type="button" class="btn btn--size-xs btn--theme-grey-outline btn-group__el">
+                            <span class="btn__inner">
+                              <span class="btn__icon btn__icon--dir-rtl">
+                                <svg class="u-icon">
+                                  <use xlink:href="images/icons/icons.svg#zoom-in"></use>
+                                </svg>
+                              </span>
+                              <span class="btn__title">Уточнить детали</span>
+                            </span>
+                          </button>
+                        </div>
+                        <div class="btn-group__col">
+                          <button type="button" class="btn btn--size-xs btn--theme-grey-outline btn-group__el">
+                            <span class="btn__inner">
+                              <span class="btn__icon btn__icon--dir-rtl">
+                                <svg class="u-icon">
+                                  <use xlink:href="images/icons/icons.svg#like"></use>
+                                </svg>
+                              </span>
+                              <span class="btn__title">Нравится</span>
+                            </span>
+                          </button>
+                        </div>
+                        <div class="btn-group__col">
+                          <button type="button" class="btn btn--size-xs btn--theme-grey-outline btn-group__el">
+                            <span class="btn__inner">
+                              <span class="btn__icon btn__icon--dir-rtl">
+                                <svg class="u-icon">
+                                  <use xlink:href="images/icons/icons.svg#dislike"></use>
+                                </svg>
+                              </span>
+                              <span class="btn__title">Не нравится</span>
+                            </span>
+                          </button>
+                        </div>
+                        <div class="btn-group__col">
+                          <button type="button" class="btn btn--size-xs btn--theme-grey-outline btn-group__el">
+                            <span class="btn__inner">
+                              <span class="btn__icon btn__icon--dir-rtl">
+                                <svg class="u-icon">
+                                  <use xlink:href="images/icons/icons.svg#refresh"></use>
+                                </svg>
+                              </span>
+                              <span class="btn__title">Сгенерировать заново</span>
+                            </span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cosmo-chat-main__footer">
+              <div class="cosmo-chat-main__footer-area">
+                <div class="cosmo-chat-main__footer-aside">
+                  <div class="js-chat-version chat-version cosmo-chat-main__footer-chat-version">
+                    <div class="chat-version__inner">
+                      <div class="chat-version__dropdown">
+                        <button type="button" data-version="GPT-3.5" class="js-chat-version-switch chat-version__dropdown-btn is-active">GPT-3.5</button>
+                        <button type="button" data-version="GPT-4o" class="js-chat-version-switch chat-version__dropdown-btn">GPT-4o</button>
+                      </div>
+                      <button type="button" class="js-chat-version-toggle chat-version__toggle">
+                        <span class="chat-version__toggle-title"></span>
+                        <picture class="chat-version__toggle-icon">
+                          <img src="images/svg/arrow-type-1.svg">
+                        </picture>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="js-type-chat type-chat cosmo-chat-main__footer-type-chat">
+                  <button type="button" class="js-type-chat-toggle type-chat__toggle">
+                    <picture class="type-chat__toggle-icon">
+                      <img src="images/svg/type-chat-2.svg" alt="Генератор изображений">
+                    </picture>
+                  </button>
+                  <div class="type-chat__dropdown">
+                    <button type="button" data-modal="popup-chat-link-ask" class="js-type-chat-btn type-chat__dropdown-btn">
+                      <picture class="type-chat__dropdown-btn-icon">
+                        <img src="images/svg/type-chat-7.svg" alt="Вставь ссылку и спроси">
+                      </picture>
+                      <span class="type-chat__dropdown-btn-title">Вставь ссылку и спроси</span>
+                    </button>
+                    <button type="button" data-modal="popup-chat-article" class="js-type-chat-btn type-chat__dropdown-btn">
+                      <picture class="type-chat__dropdown-btn-icon">
+                        <img src="images/svg/type-chat-6.svg" alt="Краткое содержание статьи">
+                      </picture>
+                      <span class="type-chat__dropdown-btn-title">Краткое содержание статьи</span>
+                    </button>
+                    <button type="button" data-modal="popup-chat-youtube" class="js-type-chat-btn type-chat__dropdown-btn">
+                      <picture class="type-chat__dropdown-btn-icon">
+                        <img src="images/svg/type-chat-5.svg" alt="Краткое содержание YouTube-видео ">
+                      </picture>
+                      <span class="type-chat__dropdown-btn-title">Краткое содержание YouTube-видео</span>
+                    </button>
+                    <button type="button" data-modal="popup-chat-youtube-ask" class="js-type-chat-btn type-chat__dropdown-btn">
+                      <picture class="type-chat__dropdown-btn-icon">
+                        <img src="images/svg/type-chat-4.svg" alt="YouTube и спроситью">
+                      </picture>
+                      <span class="type-chat__dropdown-btn-title">YouTube и спроси</span>
+                    </button>
+                    <button type="button" data-modal="popup-chat-download-ask" class="js-type-chat-btn type-chat__dropdown-btn">
+                      <picture class="type-chat__dropdown-btn-icon">
+                        <img src="images/svg/type-chat-3.svg" alt="Загрузи и спроситью">
+                      </picture>
+                      <span class="type-chat__dropdown-btn-title">Загрузи и спроси</span>
+                    </button>
+                    <a href="chat_images.html" class="js-type-chat-btn type-chat__dropdown-btn is-active">
+                      <picture class="type-chat__dropdown-btn-icon">
+                        <img src="images/svg/type-chat-2.svg" alt="Генератор изображений">
+                      </picture>
+                      <span class="type-chat__dropdown-btn-title">Генератор изображений</span>
+                    </a>
+                    <a href="chat.html" class="js-type-chat-btn type-chat__dropdown-btn">
+                      <picture class="type-chat__dropdown-btn-icon">
+                        <img src="images/svg/type-chat-1.svg" alt="Чат с нейросетью">
+                      </picture>
+                      <span class="type-chat__dropdown-btn-title">Чат с нейросетью</span>
+                    </a>
+                  </div>
+                </div>
+                <form action="#" class="cosmo-chat-main__footer-form">
+                  <textarea name="message" cols="" rows="1" class="js-chat-textarea u-scrollbar cosmo-chat-main__footer-form-textarea" placeholder="Введите запрос"></textarea>
+                  <button type="button" class="js-chat-btn-send cosmo-chat-main__footer-form-btn-send" disabled title="Отправить">
+                    <picture>
+                      <img src="images/svg/send.svg" alt="Отправить">
+                    </picture>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </main>
+          @@include('html/components/chat-profile.html', {
+            'el': 'cosmo-chat__profile'
+          })
+        </div>
+      </div>
+      @@include('html/modal.html')
+    </div>
+
+    @@include('html/script.html')
+  </body>
+</html>

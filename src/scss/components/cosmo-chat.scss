@@ -1,0 +1,55 @@
+.cosmo-chat {
+  --cosmo-chat-offset-y: 20rem;
+  --cosmo-chat-offset-x: 30rem;
+  @media (max-width: $lg) {
+    --cosmo-chat-offset-x: 20rem;
+  }
+  height: 100%;
+  &__inner {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  &__body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex: 1 1 auto;
+    @media (max-width: $lg) {
+      flex-direction: column;
+    }
+  }
+  &__header {
+    max-width: 310rem;
+    padding: var(--cosmo-chat-offset-y) var(--cosmo-chat-offset-x);
+    flex: 0 0 310rem;
+    @media (max-width: $xl) {
+      max-width: 290rem;
+      flex-basis: 290rem;
+    }
+    @media (max-width: $lg) {
+      width: 100%;
+      max-width: 100%;
+      height: 80rem;
+      flex: initial;
+      position: relative;
+      z-index: 999;
+    }
+  }
+  &__main {
+    padding: var(--cosmo-chat-offset-y) 0;
+    flex-grow: 1;
+    @media (max-width: $lg) {
+      padding: var(--cosmo-chat-offset-y) var(--cosmo-chat-offset-x);
+    }
+  }
+  &__profile {
+    width: 230rem;
+    position: absolute;
+    top: var(--cosmo-chat-offset-y);
+    right: var(--cosmo-chat-offset-x);
+    @media (max-width: $lg) {
+      display: none;
+    }
+  }
+}
